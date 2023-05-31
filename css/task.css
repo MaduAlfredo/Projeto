@@ -1,0 +1,229 @@
+.body{ 
+    padding-top: 55px;
+    height: 2562px;
+    background-color: #181537;
+    display: flex;
+}
+
+.main{
+    width: 70%;
+    display: inline;
+}
+
+.titleDiv{
+    width: 80%;
+    height: 35%;
+    margin: auto;
+    border-radius: 30px;
+    color: white;
+    background-color: #363262;
+}
+
+.title{
+    font-size: 60px;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-left: 80px;
+}
+
+.taskContent{
+    width: 90%;
+    height: 80%;
+    border-radius: 15px;
+    font-size: 35px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 45px 0;
+    background-color: #7874A4;
+}
+
+.taskText{
+    width: 92%;
+    height: 95%;
+    margin:auto;
+}
+
+.infoLateral{
+    width: 30%;
+    display: inline;
+}
+
+.info1{
+    width: 70%;
+    height: 15%;
+    margin: auto;
+    display: block;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    background-color: #363262;
+}
+
+.line{
+    width: 80%;
+}
+
+.info2{
+    width: 70%;
+    height: 15%;
+    margin: auto;
+    margin-top: 55px;
+    display: block;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    background-color: #363262;
+}
+
+.img{
+    width: 100px;
+    margin: 6% 0;
+    border-radius: 100%;
+}
+
+
+.goBack{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding-left: 105px;
+}
+
+.linkBoard{
+    width: 60%;
+    color: white;
+    font-size: 22px;
+    display: inline;
+    text-align: right;
+}
+.arrow{
+    width: 23px;
+    display: inline;
+    /* box-sizing: border-box; */
+    /* padding-right:18%; */
+    padding-left: 10px;
+}
+
+.goBack:hover{
+    color:red;
+}
+
+#arrowWhite:hover{
+    display: none;
+}
+
+#arrowRed{
+    visibility: hidden;
+}
+
+#arrowRed:hover{
+    visibility: visible;
+}
+
+@media  screen and (max-height:700px){
+    .body{ 
+        padding-top: 55px;
+        height: 1280px;
+        background-color: #181537;
+        display: flex;
+    }
+    
+    .main{
+        width: 70%;
+        display: inline;
+    }
+    
+    .titleDiv{
+        width: 80%;
+        height: 47.5%;
+        margin: auto;
+        border-radius: 30px;
+        color: white;
+        background-color: #363262;
+    }
+    
+    .title{
+        font-size: 60px;
+        box-sizing: border-box;
+        padding: 30px;
+        padding-left: 80px;
+    }
+    
+    .taskContent{
+        width: 90%;
+        height: 75%;
+        border-radius: 15px;
+        font-size: 35px;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 45px 0;
+        background-color: #7874A4;
+    }
+    
+    .taskText{
+        width: 92%;
+        /* height:47.5%; */
+        margin:auto;
+    }
+    
+    .infoLateral{
+        width: 30%;
+        display: inline;
+    }
+    
+    .info1{
+        width: 70%;
+        height: 20%;
+        margin: auto;
+        display: block;
+        text-align: center;
+        border-radius: 15px;
+        color: white;
+        background-color: #363262;
+    }
+    
+    .line{
+        width: 80%;
+    }
+    
+    .info2{
+        width: 70%;
+        height: 20%;
+        margin: auto;
+        margin-top: 55px;
+        display: block;
+        text-align: center;
+        border-radius: 15px;
+        color: white;
+        background-color: #363262;
+    }
+    
+    .img{
+        width: 50px;
+        margin: 6% 0;
+        border-radius: 100%;
+    }
+    
+    
+    .goBack{
+        width: 100%;
+        display: flex;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .linkBoard{
+        width: 80%;
+        color: white;
+        font-size: 22px;
+        display: inline;
+        text-align: right;
+    }
+    .arrow{
+        width: 23px;
+        display: inline;
+        padding-right:18%;
+    }
+}
