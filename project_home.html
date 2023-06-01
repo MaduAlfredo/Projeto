@@ -6,16 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/project_home.css">
+    <link rel="stylesheet" href="css/project.css">
 </head>
 <body>
 <div class="project">
     <section class="project_sidebar">
-        <h2 class="project_teamname">{project_teamname}</h2>
+        <a href="project_options.html"><h2 class="project_teamname">{project_teamname}</h2></a>
+        <h3 class="project_sidebar_items">Board de Tarefas</h3>
         <h3 class="project_sidebar_items">Pessoas</h3>
         <h3 class="project_sidebar_items">Dados</h3>
         <h3 class="project_sidebar_items">Adm's</h3>
         <h3 class="project_sidebar_items">Chat Geral</h3>
+        <button class="logout">
+            <div class="logoutPic">
+            <img src="fotos/logout.png" alt="" >
+        </div>
+        <div class="logoutText">
+            Sair
+        </div>
+        </button>
     </section>
     <section class="project_content">
         <h2 class="project_name">Nome do Projeto: {project_name}</h2>
@@ -23,10 +32,6 @@
         <h2>Descrição do Projeto:</h2>
 
         <textarea name="" id="" cols="30" rows="10" class="project_description"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit eaque illum corporis, esse soluta quibusdam magni exercitationem provident delectus atque velit quo ipsum doloremque officiis magnam laborum tempora. Id, assumenda! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa saepe iusto corrupti fugiat eveniet velit totam, vel quasi tempora, magnam aspernatur recusandae unde! Iure eveniet, dicta aperiam sapiente fugit facilis?</textarea>
-
-        <h2>Board de Tarefas</h2>
-
-        <button class="project_button_1">Clique para ser direcionado para o board de tarefas deste projeto</button>
     </section>
 </div>
 </body>
