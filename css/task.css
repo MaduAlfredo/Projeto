@@ -26,6 +26,7 @@
     padding-left: 80px;
 }
 
+
 .taskContent{
     width: 90%;
     height: 80%;
@@ -43,8 +44,40 @@
     margin:auto;
 }
 
+.comentDiv{
+    width: 58%;
+    height: 450px;
+    border-radius: 30px;
+    background-color: #363262;
+    box-sizing: border-box;
+    padding: 10px 25px;
+    margin: 10%;
+    margin-bottom:1%;
+}
+
+.comentsTitle{
+    width: 40%;
+}
+
+.comentButtonDiv{
+    width: 100%;
+    text-align: right;
+    margin-top: 0;
+    box-sizing: border-box;
+    padding-right: 32%;
+}
+.comentButton{
+    width: 25%;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #7168CD;
+    color: white;
+    border-style: none;
+    font-size: 18px;
+}
 .infoLateral{
     width: 30%;
+    height: auto;
     display: inline;
 }
 
@@ -97,29 +130,12 @@
     font-size: 22px;
     display: inline;
     text-align: right;
-}
-.arrow{
-    width: 23px;
-    display: inline;
-    /* box-sizing: border-box; */
-    /* padding-right:18%; */
-    padding-left: 10px;
+    text-decoration: none;
 }
 
-.goBack:hover{
+.linkBoard:hover{
     color:red;
-}
-
-#arrowWhite:hover{
-    display: none;
-}
-
-#arrowRed{
-    visibility: hidden;
-}
-
-#arrowRed:hover{
-    visibility: visible;
+    text-decoration: none;
 }
 
 @media  screen and (max-height:700px){
