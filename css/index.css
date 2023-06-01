@@ -14,6 +14,25 @@
     background-color: #181537;
 }
 
+.profileInfo{
+    width: 50%;
+    display: flex;
+    color: white;
+    text-align: center;
+    align-items: center;
+    border-radius: 30px;
+    background-color: #363262; 
+}
+  
+.profilePicture{
+    width: 20%;
+    display: inline;
+    border-radius: 100%;
+}
+
+.profileName{
+    width: 80%;
+}
 
 .logout{
     width: 40%;
