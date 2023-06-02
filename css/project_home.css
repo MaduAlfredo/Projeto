@@ -95,15 +95,3 @@ h2{
 .logout:hover{
     background-color: #363262;
 }
-
-
-/* project_options.html :-) */
-
-.project_options{
-    background-color: #363262;
-    width: 85%;
-    display: flex;
-}
-.project_title{
-    text-align: center;
-}
