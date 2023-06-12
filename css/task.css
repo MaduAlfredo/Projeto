@@ -25,10 +25,7 @@
     align-items: center;
 }
 .project_teamname{
-    /* margin: 8%; */
     width: 100%;
-    /* box-sizing: border-box; */
-    /* padding: 3%; */
 }
 .project_sidebar_items{
     margin-top: 10%;
@@ -158,12 +155,10 @@
     display: flex;
     text-align: center;
     margin-top: 20px;
-    box-sizing: border-box;
-    padding-left: 105px;
 }
 
 .linkBoard{
-    width: 60%;
+    width: 70%;
     color: white;
     font-size: 22px;
     display: inline;
@@ -174,111 +169,4 @@
 .linkBoard:hover{
     color:red;
     text-decoration: none;
-}
-
-
-@media  screen and (max-height:700px){
-    .body{ 
-        padding-top: 55px;
-        height: 1280px;
-        background-color: #181537;
-        display: flex;
-    }
-    
-    .main{
-        width: 70%;
-        display: inline;
-    }
-    
-    .titleDiv{
-        width: 80%;
-        height: 47.5%;
-        margin: auto;
-        border-radius: 30px;
-        color: white;
-        background-color: #363262;
-    }
-    
-    .title{
-        font-size: 60px;
-        box-sizing: border-box;
-        padding: 30px;
-        padding-left: 80px;
-    }
-    
-    .taskContent{
-        width: 90%;
-        height: 75%;
-        border-radius: 15px;
-        font-size: 35px;
-        margin: auto;
-        box-sizing: border-box;
-        padding: 45px 0;
-        background-color: #7874A4;
-    }
-    
-    .taskText{
-        width: 92%;
-        /* height:47.5%; */
-        margin:auto;
-    }
-    
-    .infoLateral{
-        width: 30%;
-        display: inline;
-    }
-    
-    .info1{
-        width: 70%;
-        height: 20%;
-        margin: auto;
-        display: block;
-        text-align: center;
-        border-radius: 15px;
-        color: white;
-        background-color: #363262;
-    }
-    
-    .line{
-        width: 80%;
-    }
-    
-    .info2{
-        width: 70%;
-        height: 20%;
-        margin: auto;
-        margin-top: 55px;
-        display: block;
-        text-align: center;
-        border-radius: 15px;
-        color: white;
-        background-color: #363262;
-    }
-    
-    .img{
-        width: 50px;
-        margin: 6% 0;
-        border-radius: 100%;
-    }
-    
-    
-    .goBack{
-        width: 100%;
-        display: flex;
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-    .linkBoard{
-        width: 80%;
-        color: white;
-        font-size: 22px;
-        display: inline;
-        text-align: right;
-    }
-    .arrow{
-        width: 23px;
-        display: inline;
-        padding-right:18%;
-    }
 }
