@@ -1,5 +1,5 @@
 .body{ 
-    height: 2562px;
+    width: 100%;
     background-color: #363262;
     display: flex;
 }
@@ -10,10 +10,12 @@
     color: white;
     background-color: #181537;
     box-sizing: border-box;
+    position: fixed;
     padding-top: 25px;
 }
 .teamTitle{
     width: 90%;
+    height: 45px;
     background-color: #7168CD;
     font-size: 27px;
     text-align: center;
@@ -21,7 +23,6 @@
     margin: auto;
     display: flex;
     flex-wrap: nowrap;
-    height: 45px;
     align-items: center;
 }
 .project_teamname{
@@ -37,13 +38,15 @@
 
 .main{
     width: 70%;
+    height: 100%;
     margin-top: 65px;
+    margin-left: 15%;
     display: inline;
 }
 
 .titleDiv{
     width: 80%;
-    height: 35%;
+    height: 800px;
     margin: auto;
     border-radius: 30px;
     color: white;
@@ -86,6 +89,7 @@
     box-sizing: border-box;
     padding: 10px 25px;
     margin: 10%;
+    margin-top: 3%;
     margin-bottom:1%;
 }
 
@@ -103,6 +107,7 @@
 .comentButton{
     width: 25%;
     height: 40px;
+    margin-bottom: 5%;
     border-radius: 30px;
     background-color: #7168CD;
     color: white;
@@ -118,7 +123,7 @@
 
 .info1{
     width: 70%;
-    height: 15%;
+    height: 350px;
     margin: auto;
     display: block;
     text-align: center;
@@ -133,7 +138,7 @@
 
 .info2{
     width: 70%;
-    height: 15%;
+    height: 350px;
     margin: auto;
     margin-top: 55px;
     display: block;
@@ -169,4 +174,5 @@
 .linkBoard:hover{
     color:red;
     text-decoration: none;
+    cursor: pointer;
 }
