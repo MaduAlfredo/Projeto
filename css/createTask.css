@@ -1,0 +1,180 @@
+@import url(reset.css);
+.body{ 
+    width: 100%;
+    background-color: #363262;
+    display: flex;
+}
+
+.menuLateral{
+    width: 15%;
+    height: 100%;
+    color: white;
+    background-color: #181537;
+    box-sizing: border-box;
+    position: fixed;
+    padding-top: 25px;
+}
+.teamTitle{
+    width: 90%;
+    height: 45px;
+    background-color: #7168CD;
+    font-size: 27px;
+    text-align: center;
+    border-radius: 5px;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.project_teamname{
+    width: 100%;
+}
+.project_sidebar_items{
+    margin-top: 10%;
+    font-size: 23px;
+    text-align: center;
+    color: white;
+    background-color: #181537;
+}
+
+.main{
+    width: 70%;
+    height: 100%;
+    margin-top: 65px;
+    margin-left: 15%;
+    display: inline;
+}
+
+.titleDiv{
+    width: 80%;
+    height: 800px;
+    margin: auto;
+    border-radius: 30px;
+    color: white;
+    background-color: #181537;
+}
+
+.title{
+    font-size: 60px;
+    box-sizing: border-box;
+    padding: 30px;
+    padding-left: 80px;
+    border: none;
+}
+
+
+.taskContent{
+    width: 90%;
+    height: 80%;
+    border-radius: 15px;
+    font-size: 35px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 45px 0;
+    background-color: #7874A4;
+}
+
+.taskText{
+    width: 92%;
+    height: 95%;
+    text-align: center;
+    margin:auto;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.comentDiv{
+    width: 58%;
+    height: 450px;
+    border-radius: 30px;
+    background-color: #7874A4;
+    box-sizing: border-box;
+    padding: 10px 25px;
+    margin: 10%;
+    margin-top: 3%;
+    margin-bottom:1%;
+}
+
+.comentsTitle{
+    width: 40%;
+}
+
+.comentButtonDiv{
+    width: 100%;
+    text-align: right;
+    margin-top: 0;
+    box-sizing: border-box;
+    padding-right: 32%;
+}
+.comentButton{
+    width: 25%;
+    height: 40px;
+    margin-bottom: 5%;
+    border-radius: 30px;
+    background-color: #7168CD;
+    color: white;
+    border-style: none;
+    font-size: 18px;
+}
+.infoLateral{
+    width: 30%;
+    height: auto;
+    margin-top: 65px;
+    display: inline;
+}
+
+.info1{
+    width: 70%;
+    height: 350px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    background-color: #181537;
+}
+
+.line{
+    width: 80%;
+}
+
+.info2{
+    width: 70%;
+    height: 350px;
+    margin: auto;
+    margin-top: 55px;
+    display: block;
+    text-align: center;
+    border-radius: 15px;
+    color: white;
+    background-color: #181537;
+}
+
+.img{
+    width: 100px;
+    margin: 6% 0;
+    border-radius: 100%;
+}
+
+
+.goBack{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.linkBoard{
+    width: 70%;
+    color: white;
+    font-size: 22px;
+    display: inline;
+    text-align: right;
+    text-decoration: none;
+}
+
+.linkBoard:hover{
+    color:red;
+    text-decoration: none;
+    cursor: pointer;
+}
