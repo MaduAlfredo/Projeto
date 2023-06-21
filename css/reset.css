@@ -12,6 +12,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+	font-family: 'Poppins', sans-serif;
 	text-decoration: none;
 	margin: 0;
 	padding: 0;
