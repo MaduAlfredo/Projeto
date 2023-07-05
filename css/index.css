@@ -1,113 +1,36 @@
-.home{
-    width: 100%;
-    display: flex;
-    height: 100%;
-    text-align: center;
-}
+@import url(./reset.css);
+@import url(project_home.css);
 
-.menuLateral{
-    width: 15%;
-    height: 100%;
-    display: inline;
-    text-align: center;
-    position: fixed;
-    background-color: #181537;
-}
-
-.sidebarInfo{
-    margin-top: 10%;
-    font-size: 23px;
-    text-align: center;
-    color: white;
-    background-color: #181537;
-}
-
-.profileInfo{
-    width: 60%;
-    height: 50px;
-    margin: 25px 25%;
-    display: flex;
-    color: white;
-    text-align: center;
-    align-items: center;
-    border-radius: 30px;
-    background-color: #363262; 
-}
-  
-.profilePicture{
-    width: 25%;
-    display: inline;
-    border-radius: 100%;
-}
-
-.profileName{
-    width: 80%;
-}
-
-.logout{
-    width: 40%;
-    height: 36px;
-    margin: auto;
-    margin-bottom: 0;
-    border: none;
-    color: red;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    border-radius: 30px;
-    background-color: #181537;
-}
-
-.logoutPic{
-    width: 45%;
-    display: inline;
-    text-align: right;
-}
-
-.logoutPic img{
-    width: 25px;
-}
-
-.logoutText{
-    width: 50%;
-    display: inline;
-    text-align: left;
-    align-items: center;
-    box-sizing: border-box;
-    padding-left: 6px;
-}
-
-.logout:hover{
-    background-color: #363262;
-}
-
-.main{
+.project_options{
     width: 85%;
-    height: 100%;
     margin-left: 15%;
-    display: inline;
+    min-height: 1100px;
     background-color: #363262;
 }
-
-.mainTitle{
-    width: 100%;
-    margin: 45px 0;
-    height: 75px;
-    display: block;
+.project_title{
+    padding: 50px 0;
+    text-align: center;
+    font-size: 40px;
     color: white;
-    font-size: 75px;
 }
-
-.teamsGrid{
-    width: 100%;
-    display: flexbox;
+.project_grid{
+    margin-left: 5%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
 }
-
-.teamButton{
-    width: 15%;
-    height: 150px;
-    margin:3%;
-    border: none;
+.project_items{
+    padding-top: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 5%;
     border-radius: 25px;
+    background-color: #7168CD;
+}
+.project_button_add-div{
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
     background-color: #7168CD;
 }
