@@ -30,11 +30,12 @@ body{
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  padding: 1rem .5rem;
+  padding: .5rem;
 }
 
 .card img{
   width: 20px;
+  height: 20px;
 }
 
 .dificuldade{
@@ -50,6 +51,10 @@ body{
 
 .baixo{
   width: 100%;
+}
+
+.pessoas-foto{
+  border-radius: 50%;
 }
 
 .ultima-linha{
