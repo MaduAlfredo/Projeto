@@ -5,36 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Home</title>
 </head>
 <body>
-    <div class="project">
-        <section class="project_sidebar">
-            <h2 class="project_teamname">teamname</h2>
-            <ul>
-                <li class="project_sidebar_items"><a href="">Board de Tarefas</a></li>
-                <li class="project_sidebar_items"><a href="">Pessoas</a></li>
-                <li class="project_sidebar_items"><a href="">Dados</a></li>
-                <li class="project_sidebar_items"><a href="">Adm's</a></li>
-                <li class="project_sidebar_items"><a href="">Chat Geral</a></li>
-                <li class="project_sidebar_items"><a href="settings.html">Configurações</a></li>
-            </ul>
-            <button class="logout">
-                <div class="logoutPic">
-                    <img src="../fotos/logout.png" alt="" >
-                </div>
-                <div class="logoutText">
-                    <span>Sair</span>
-                </div>
-            </button>
-        </section>
-        <section class="project_options">
+    <section class="project">
+        <header class="project_header">
+            <img src="../fotos/user_icon.png">
             <h1 class="project_title">Projetos</h1>
-            <button id="criarDiv" class="project_button_add-div">Criar Div</button>
+        </header>
+        <div id="container" class="project_grid">
 
-            <div id="container" class="project_grid"></div>
-        </section>
-    </div>
+        </div>
+    </section>
 <script src="js/project_funcions.js"></script>
 </body>
 </html>

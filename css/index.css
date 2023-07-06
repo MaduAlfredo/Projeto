@@ -1,18 +1,29 @@
 @import url(./reset.css);
 @import url(project_home.css);
 
-.project_options {
-    width: 85%;
-    margin-left: 15%;
+.project {
+    width: 100%;
     min-height: 1100px;
     background-color: #363262;
 }
 
+.project_header img {
+    width: 5%;
+    margin: 50px;
+    display: inline;
+}
+.project_header{
+    width: 100%;
+    align-items: center;
+    height: 150px;
+    display: flex;
+}
+
 .project_title {
-    padding: 50px 0;
     text-align: center;
     font-size: 40px;
     color: white;
+    display: inline;
 }
 
 .project_grid {
@@ -29,12 +40,5 @@
     padding-right: 5%;
     margin: 5%;
     border-radius: 25px;
-    background-color: #7168CD;
-}
-
-.project_button_add-div {
-    width: 100px;
-    height: 50px;
-    border-radius: 15px;
     background-color: #7168CD;
 }
