@@ -1,11 +1,12 @@
 @import url(reset.css);
-.body{ 
+
+.body {
     width: 100%;
     background-color: #363262;
     display: flex;
 }
 
-.menuLateral{
+.menuLateral {
     width: 15%;
     height: 100%;
     color: white;
@@ -14,7 +15,8 @@
     position: fixed;
     padding-top: 25px;
 }
-.teamTitle{
+
+.teamTitle {
     width: 90%;
     height: 45px;
     background-color: #7168CD;
@@ -26,10 +28,12 @@
     flex-wrap: nowrap;
     align-items: center;
 }
-.project_teamname{
+
+.project_teamname {
     width: 100%;
 }
-.project_sidebar_items{
+
+.project_sidebar_items {
     margin-top: 10%;
     font-size: 23px;
     text-align: center;
@@ -37,7 +41,7 @@
     background-color: #181537;
 }
 
-.main{
+.main {
     width: 70%;
     height: 100%;
     margin-top: 65px;
@@ -45,7 +49,7 @@
     display: inline;
 }
 
-.titleDiv{
+.titleDiv {
     width: 80%;
     height: 800px;
     margin: auto;
@@ -54,7 +58,7 @@
     background-color: #181537;
 }
 
-.title{
+.title {
     font-size: 60px;
     box-sizing: border-box;
     padding: 30px;
@@ -62,7 +66,7 @@
 }
 
 
-.taskContent{
+.taskContent {
     width: 90%;
     height: 80%;
     border-radius: 15px;
@@ -73,16 +77,16 @@
     background-color: #7874A4;
 }
 
-.taskText{
+.taskText {
     width: 92%;
     height: 95%;
     text-align: center;
-    margin:auto;
+    margin: auto;
     box-sizing: border-box;
     padding: 15px;
 }
 
-.comentDiv{
+.comentDiv {
     width: 58%;
     height: 450px;
     border-radius: 30px;
@@ -91,21 +95,22 @@
     padding: 10px 25px;
     margin: 10%;
     margin-top: 3%;
-    margin-bottom:1%;
+    margin-bottom: 1%;
 }
 
-.comentsTitle{
+.comentsTitle {
     width: 40%;
 }
 
-.comentButtonDiv{
+.comentButtonDiv {
     width: 100%;
     text-align: right;
     margin-top: 0;
     box-sizing: border-box;
     padding-right: 32%;
 }
-.comentButton{
+
+.comentButton {
     width: 25%;
     height: 40px;
     margin-bottom: 5%;
@@ -115,14 +120,15 @@
     border-style: none;
     font-size: 18px;
 }
-.infoLateral{
+
+.infoLateral {
     width: 30%;
     height: auto;
     margin-top: 65px;
     display: inline;
 }
 
-.info1{
+.info1 {
     width: 70%;
     height: 350px;
     margin: auto;
@@ -133,11 +139,11 @@
     background-color: #181537;
 }
 
-.line{
+.line {
     width: 80%;
 }
 
-.info2{
+.info2 {
     width: 70%;
     height: 350px;
     margin: auto;
@@ -149,21 +155,21 @@
     background-color: #181537;
 }
 
-.img{
+.img {
     width: 100px;
     margin: 6% 0;
     border-radius: 100%;
 }
 
 
-.goBack{
+.goBack {
     width: 100%;
     display: flex;
     text-align: center;
     margin-top: 20px;
 }
 
-.linkBoard{
+.linkBoard {
     width: 70%;
     color: white;
     font-size: 22px;
@@ -172,8 +178,8 @@
     text-decoration: none;
 }
 
-.linkBoard:hover{
-    color:red;
+.linkBoard:hover {
+    color: red;
     text-decoration: none;
     cursor: pointer;
 }

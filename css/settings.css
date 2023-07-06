@@ -1,120 +1,125 @@
-*{
+* {
     margin: 0%;
 }
-body{
+
+body {
     background-color: #363262;
 }
 
-#side-bar{
+#side-bar {
     display: inline-block;
-    width:10%;
-    height:100%;
-    background-color:#181537;
-    position:absolute;
+    width: 10%;
+    height: 100%;
+    background-color: #181537;
+    position: absolute;
 }
-.icon-button{
-    width:30%;
-    height:6%;
-    border-radius:50%;
+
+.icon-button {
+    width: 30%;
+    height: 6%;
+    border-radius: 50%;
     font-size: larger;
     color: white;
-    background-color:#AD37DD;
-    border:none;
-    margin:5%;
+    background-color: #AD37DD;
+    border: none;
+    margin: 5%;
 }
-.icon-font{
-    color:white;
+
+.icon-font {
+    color: white;
     display: inline-block;
 }
 
-.your-account{
-    color:white;
+.your-account {
+    color: white;
     font-size: medium;
-    margin-top:10%;
-    width:100%;
-    height:3%;
-    margin-left:25%;
-    padding-top:8%;
+    margin-top: 10%;
+    width: 100%;
+    height: 3%;
+    margin-left: 25%;
+    padding-top: 8%;
 }
 
-.login-safety{
-    color:white;
-    font-size:small;
-    margin:15%;
-    margin-left:20%;
+.login-safety {
+    color: white;
+    font-size: small;
+    margin: 15%;
+    margin-left: 20%;
 }
 
-h3{
-    color:white;
-    font-size:medium;
-    margin:22%;
+h3 {
+    color: white;
+    font-size: medium;
+    margin: 22%;
 }
 
-#principal{
-    position:relative;
+#principal {
+    position: relative;
 }
 
-.perfil{
-    margin:6%;
-    margin-left:24%;
-    width:5%;
-    height:90px;
-    border-radius:50%;
+.perfil {
+    margin: 6%;
+    margin-left: 24%;
+    width: 5%;
+    height: 90px;
+    border-radius: 50%;
     border: none;
     background-color: #AD37DD;
 }
 
-.nome{
-    color:white;
-    margin:12%;
-    margin-top:2%;
-    font-size: x-large;
-    margin-bottom:4%;
-    margin-left:24%;
-}
-.email{
+.nome {
     color: white;
-    margin:12%;
-    margin-top:2%;
+    margin: 12%;
+    margin-top: 2%;
     font-size: x-large;
-    margin-bottom:4%;
-    margin-left:24%;
+    margin-bottom: 4%;
+    margin-left: 24%;
 }
 
-hr{
-    margin-left:24%;
-}
-.hr1{
-    margin:0;
+.email {
+    color: white;
+    margin: 12%;
+    margin-top: 2%;
+    font-size: x-large;
+    margin-bottom: 4%;
+    margin-left: 24%;
 }
 
-.edit-btn{
-    width:6%;
-    height:40px;
-    border-radius:10px;
-    border:5px black;
+hr {
+    margin-left: 24%;
+}
+
+.hr1 {
+    margin: 0;
+}
+
+.edit-btn {
+    width: 6%;
+    height: 40px;
+    border-radius: 10px;
+    border: 5px black;
     font-size: medium;
-    font-weight:bold;
-    margin-left:3%;
+    font-weight: bold;
+    margin-left: 3%;
 }
 
-.remove-btn{
-    width:6%;
-    height:40px;
-    border-radius:10px;
-    border:5px black;
+.remove-btn {
+    width: 6%;
+    height: 40px;
+    border-radius: 10px;
+    border: 5px black;
     font-size: medium;
-    font-weight:bold;
-    margin-left:34%;
+    font-weight: bold;
+    margin-left: 34%;
 }
 
-.btn1{
-    margin-left:78%;
-    margin-bottom:1%;
-    width:6%;
-    height:40px;
-    border-radius:10px;
-    border:5px black;
+.btn1 {
+    margin-left: 78%;
+    margin-bottom: 1%;
+    width: 6%;
+    height: 40px;
+    border-radius: 10px;
+    border: 5px black;
     font-size: medium;
-    font-weight:bold;
+    font-weight: bold;
 }
