@@ -96,7 +96,6 @@ display: none;
   width: 100%;
   height: 100%;
   background-color: #363262;
-  background-image: url('/img/subtle-prism.png');
   position: absolute;
   border-radius: 6px;
   transform-style: preserve-3d;

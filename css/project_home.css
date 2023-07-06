@@ -23,6 +23,9 @@
     color: white;
     background-color: #181537;
 }
+.project_sidebar_items a{
+    color: white;
+}
 .project_content{
     background-color: #363262;
     text-align: center;
