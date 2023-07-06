@@ -1,13 +1,14 @@
 @import url(./reset.css);
 
-.project_sidebar{
+.project_sidebar {
     padding-top: 3rem;
     width: 15%;
     height: 100vh;
     background-color: #181537;
     position: fixed;
 }
-.project_teamname{
+
+.project_teamname {
     margin: 0 2rem;
     text-align: center;
     font-size: 24px;
@@ -16,17 +17,20 @@
     color: white;
     background-color: #7168CD;
 }
-.project_sidebar_items{
+
+.project_sidebar_items {
     margin: 2rem;
     font-size: 20px;
     text-align: center;
     color: white;
     background-color: #181537;
 }
-.project_sidebar_items a{
+
+.project_sidebar_items a {
     color: white;
 }
-.project_content{
+
+.project_content {
     background-color: #363262;
     text-align: center;
     width: 85%;
@@ -34,24 +38,26 @@
     margin-left: 15%;
 }
 
-.project_content h2{
+.project_content h2 {
     font-size: 25px;
     color: white;
 }
 
-.project_name{
+.project_name {
     font-size: 40px;
     padding: 50px 0;
     color: white;
 }
-.project_description{
+
+.project_description {
     margin: 20px 100px;
     font-size: 15px;
     border-radius: 10px;
     border: none;
     color: white;
-    background-color : #7168CD;
+    background-color: #7168CD;
 }
+
 /* .project_button_1{
     margin-top: 20px;
     margin-bottom: 50px;
@@ -62,7 +68,7 @@
     color: white;
     background-color : #7168CD;
 } */
-.logout{
+.logout {
     width: 40%;
     height: 36px;
     margin: auto;
@@ -74,15 +80,18 @@
     border-radius: 30px;
     background-color: #181537;
 }
-.logoutPic{
+
+.logoutPic {
     width: 45%;
     display: inline;
     text-align: right;
 }
-.logoutPic img{
+
+.logoutPic img {
     width: 25px;
 }
-.logoutText{
+
+.logoutText {
     width: 50%;
     display: inline;
     text-align: left;
@@ -90,6 +99,7 @@
     box-sizing: border-box;
     padding-left: 6px;
 }
-.logout:hover{
+
+.logout:hover {
     background-color: #363262;
 }
