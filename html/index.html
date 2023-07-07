@@ -5,19 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Home</title>
 </head>
 <body>
     <section class="project">
         <header class="project_header">
-            <img src="../fotos/user_icon.png">
+            <div class="dropdown">
+            <img src="../fotos/mr.incredible.png" class="dropbtn">
+                <div class="dropdown-content">
+                    <a href="settings.html">Configurações</a>
+                    <img src="../fotos/logout.png" class="jurema">
+                </div>
+            </div>
             <h1 class="project_title">Projetos</h1>
         </header>
-        <div id="container" class="project_grid">
-
+        <img onclick="criarDiv()" src="../fotos/new icon.png" class="new_icon" id="criarDiv">
+        <div id="containerDiv" class="project_grid">      
+            <div class="project_items">
+                <p class="judas">Nome do Projeto: {project_name}</p>
+                <p class="patricia">Descrição do projeto: {project_description}</p>
+            </div>   
         </div>
     </section>
-<script src="js/project_funcions.js"></script>
+<script src="../js/project_funcions.js"></script>
 </body>
 </html>

@@ -1,6 +1,8 @@
+//Function1 
+
 // Obtém uma referência para o botão e para o contêiner onde as divs serão adicionadas
 const botaoCriarDiv = document.getElementById('criarDiv');
-const containerDiv = document.getElementById('container');
+const containerDiv = document.getElementById('containerDiv');
 
 // Função para criar uma nova div
 function criarDiv() {
@@ -19,3 +21,8 @@ function criarDiv() {
 
 // Adiciona um ouvinte de evento ao botão para chamar a função criarDiv quando o botão for clicado
 botaoCriarDiv.addEventListener('click', criarDiv);
+
+
+//Function2
+
+//Abre o modal de cadastro do projeto
