@@ -13,6 +13,20 @@ body{
     padding-top: 2rem;
 }
 
+.dragsndrops{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 3rem 2rem;
+}
+
+.type{
+    background-color: #b0acdb;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
 .listas{
   display: flex;
   flex-direction: column;
