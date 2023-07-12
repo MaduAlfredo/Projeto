@@ -18,7 +18,7 @@
     text-align: center;
     font-size: 40px;
     color: white;
-    padding-left: 23%;
+    padding-left: 21%;
 }
 
 .new_icon {
@@ -59,6 +59,23 @@
 .jurema {
     width: 20%;
     margin-left: 12px;
+}
+
+.paola{
+    display: flex;
+}
+
+.leozin{
+    padding-left: 250px ;
+    color: white;
+    font-size: 30px;
+}
+
+.pedrinho{
+    text-align: right;
+    margin-top: 10px;
+    color: #333333;
+    font-size: 15px;
 }
 
 .dropbtn {

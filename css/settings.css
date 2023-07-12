@@ -1,19 +1,11 @@
 @import url(./reset.css);
 
-* {
-    margin: 0%;
-}
-
-body {
-    background-color: #363262;
-}
-
-#side-bar {
+.sidebar {
     display: inline-block;
     width: 10%;
     height: 100%;
     background-color: #181537;
-    position: absolute;
+    position: fixed;
 }
 
 .icon-button {
@@ -27,26 +19,20 @@ body {
     margin: 5%;
 }
 
-.icon-font {
+.icon_font {
+    margin: 0 30px;
     color: white;
     display: inline-block;
 }
 
-.your-account {
+.sidebar_items {
     color: white;
     font-size: medium;
     margin-top: 10%;
     width: 100%;
     height: 3%;
-    margin-left: 25%;
+    margin-left: 15%;
     padding-top: 8%;
-}
-
-.login-safety {
-    color: white;
-    font-size: small;
-    margin: 15%;
-    margin-left: 20%;
 }
 
 h3 {
@@ -55,70 +41,48 @@ h3 {
     margin: 22%;
 }
 
-#principal {
-    position: relative;
+hr{
+    width: 60%;
 }
 
-.perfil {
-    margin: 6%;
-    margin-left: 24%;
-    width: 5%;
-    height: 90px;
-    border-radius: 50%;
-    border: none;
-    background-color: #AD37DD;
+.settings{
+    display: inline-block;
+    width: 90%;
+    min-height: 1100px;
+    height: 100%;
+    margin-left: 10%;
+    background-color: #363262;
 }
 
-.nome {
+.icon_photo{
+    width: 40%;
+    margin: 10px 50px;
+    border-radius: 100%;
+}
+
+.settings_top{
+    width: 60%;
+    margin: 30px 50px;
+    justify-content: space-between;
+    display: flex;
+    margin-left: 21%;
+}
+
+.settings_elements {
     color: white;
-    margin: 12%;
     margin-top: 2%;
     font-size: x-large;
     margin-bottom: 4%;
     margin-left: 24%;
 }
 
-.email {
-    color: white;
-    margin: 12%;
-    margin-top: 2%;
-    font-size: x-large;
-    margin-bottom: 4%;
-    margin-left: 24%;
+.settings_photo{
+    width: 7%;
+    border-radius: 100%;
 }
 
-hr {
-    margin-left: 24%;
-}
-
-.hr1 {
-    margin: 0;
-}
-
-.edit-btn {
-    width: 6%;
-    height: 40px;
-    border-radius: 10px;
-    border: 5px black;
-    font-size: medium;
-    font-weight: bold;
-    margin-left: 3%;
-}
-
-.remove-btn {
-    width: 6%;
-    height: 40px;
-    border-radius: 10px;
-    border: 5px black;
-    font-size: medium;
-    font-weight: bold;
-    margin-left: 34%;
-}
-
-.btn1 {
-    margin-left: 78%;
-    margin-bottom: 1%;
-    width: 6%;
+.settings_btn {
+    width: 40%;
     height: 40px;
     border-radius: 10px;
     border: 5px black;
