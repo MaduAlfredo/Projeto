@@ -9,23 +9,38 @@
 </head>
 <body>
     <section class="project_sidebar">
-        <h2 class="project_teamname">teamname</h2>
-        <ul>
-            <li class="project_sidebar_items"><a href="./board.html">Board de Tarefas</a></li>
-            <li class="project_sidebar_items"><a href="#">Pessoas</a></li>
-            <li class="project_sidebar_items"><a href="#">Dados</a></li>
-            <li class="project_sidebar_items"><a href="#">Adm's</a></li>
-            <li class="project_sidebar_items"><a href="#">Chat Geral</a></li>
-            <li class="project_sidebar_items"><a href="./settings.html">Configurações</a></li>
-        </ul>
-        <button class="logout">
-            <div class="logoutPic">
-                <img src="../fotos/logout.png" alt="" >
+        <div class="sidebar-cima">
+            <div class="profile">
+                <button class="profile-left">
+                    <p style="font-size: 20px;">teu nome agui</p>
+                    <span style="font-size: 10px;" >configurações</span>
+                </button>
+                <img src="../fotos/user_icon.png" width="45px" alt="">
             </div>
-            <div class="logoutText">
-                <span>Sair</span>
-            </div>
-        </button>
+            <div class="dropdown">
+                <div class="select">
+                  <span class="selected">Figma</span>
+                  <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                  <li>Framer</li>
+                  <li>Sketch</li>
+                  <li>Invision Studio</li>
+                  <li class="active">Figma</li>
+                  <li>Adobe XD</li>
+                </ul>
+              </div>
+        </div>
+        <div class="sidebar-baixo">
+            <button class="logout">
+              <div class="logoutPic">
+                  <img src="../fotos/logout.png" alt="" >
+              </div>
+              <div class="logoutText">
+                  <span>Sair</span>
+              </div>
+          </button>
+        </div>
     </section>
     <section class="board">
         <div class="exibicao">
@@ -42,10 +57,6 @@
                         </div>
                     </div>
                     <div class="baixo">
-                        <div class="linguagens">
-                            <img src="../fotos/logout.png" alt="">
-                            <img src="../fotos/logout.png" alt="">
-                        </div>
                         <div class="ultima-linha">
                             <div class="pessoas">
                                 <img src="../fotos/login.png" class="pessoas-foto" alt="">
@@ -64,10 +75,6 @@
                         </div>
                     </div>
                     <div class="baixo">
-                        <div class="linguagens">
-                            <img src="../fotos/logout.png" alt="">
-                            <img src="../fotos/logout.png" alt="">
-                        </div>
                         <div class="ultima-linha">
                             <div class="pessoas">
                                 <img src="../fotos/login.png" class="pessoas-foto" alt="">
@@ -86,10 +93,6 @@
                         </div>
                     </div>
                     <div class="baixo">
-                        <div class="linguagens">
-                            <img src="../fotos/logout.png" alt="">
-                            <img src="../fotos/logout.png" alt="">
-                        </div>
                         <div class="ultima-linha">
                             <div class="pessoas">
                                 <img src="../fotos/login.png" class="pessoas-foto" alt="">
@@ -108,10 +111,6 @@
                         </div>
                     </div>
                     <div class="baixo">
-                        <div class="linguagens">
-                            <img src="../fotos/logout.png" alt="">
-                            <img src="../fotos/logout.png" alt="">
-                        </div>
                         <div class="ultima-linha">
                             <div class="pessoas">
                                 <img src="../fotos/login.png" class="pessoas-foto" alt="">
@@ -130,10 +129,6 @@
                         </div>
                     </div>
                     <div class="baixo">
-                        <div class="linguagens">
-                            <img src="../fotos/logout.png" alt="">
-                            <img src="../fotos/logout.png" alt="">
-                        </div>
                         <div class="ultima-linha">
                             <div class="pessoas">
                                 <img src="../fotos/login.png" class="pessoas-foto" alt="">
@@ -144,53 +139,9 @@
                 </div>
             </div>
         </div>
-<!--         <div class="visualizacao cards">
-            <div class="content card" draggable="true">
-                <div class="cima">
-                    <div class="titulo">
-                        <h3>inserindo bastante texto pra testar o card</h3>
-                    </div>
-                </div>
-                <div class="baixo">
-                    <div class="linguagens">
-                        <img src="../fotos/logout.png" alt="">
-                        <img src="../fotos/logout.png" alt="">
-                    </div>
-                    <div class="ultima-linha">
-                        <div class="pessoas">
-                            <img src="../fotos/login.png" class="pessoas-foto" alt="">
-                        </div>
-                        <div class="dificuldade"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="content card" draggable="true">
-                <p>teste</p>
-            </div>
-            <div class="content card" draggable="true">
-                <p>teste!</p>
-            </div>
-            <div class="content card" draggable="true">
-                <p>teste!</p>
-            </div>
-            <div class="content card" draggable="true">
-                <p>teste!</p>
-            </div>
-            <div class="content card" draggable="true">
-                <p>teste!</p>
-            </div>
-            <div class="content card" draggable="true">
-                <p>teste!</p>
-            </div>
-            <div class="content card" draggable="true">
-                <p>teste!</p>
-            </div>
-            <div class="content card" draggable="true">
-                <p>teste!</p>
-            </div>
-        </div> -->
+        <script type="text/javascript" src="../js/main.js"></script>
     </section>
-    <script>
+<!--     <script>
         function myFunction() {
           var checkBox = document.getElementById("reg-log");
           var view = document.querySelector('.visualizacao');
@@ -207,6 +158,6 @@
             });
           }
         }
-        </script>
+        </script> -->
 </body>
 </html>
