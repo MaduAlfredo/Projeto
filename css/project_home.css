@@ -199,3 +199,13 @@
     background-color: #181537;
     transition: .2s;
 }
+
+@media screen and (min-width: 1200px) and (max-width: 1700px){
+  .select{
+    width: 11vw;
+  }
+
+  .menu{
+    width: 11vw;
+  }
+}

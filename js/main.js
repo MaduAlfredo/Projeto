@@ -27,4 +27,23 @@ options.forEach(option => {
           option.classList.add('active');
   });
 });
+
+
+var checkBox = document.getElementById("reg-log");
+
+checkBox.addEventListener('click', function(){
+  var view = document.querySelector('.type');
+  var elements = document.querySelectorAll('.content');
+  if (checkBox.checked){
+    elements.forEach(element => {
+        element.classList.replace('card', 'lista');
+    });
+    view.classList.replace('cards', 'listas');
+  } else {
+    view.classList.replace('listas', 'cards');
+    elements.forEach(element => {
+        element.classList.replace('lista', 'card');
+    });
+  }
+})
 });
