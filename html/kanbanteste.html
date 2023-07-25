@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kanban Board</title>
+	<link rel="stylesheet" href="../css/kanbanteste.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+</head>
+<body>
+    <section class="project_sidebar">
+        <div class="sidebar-cima">
+            <div class="profile">
+                <button class="profile-left">
+                    <p style="font-size: 20px;">teu nome agui</p>
+                    <span style="font-size: 10px;" >configurações</span>
+                </button>
+                <img src="../fotos/user_icon.png" width="45px" alt="">
+            </div>
+            <div class="dropdown">
+                <div class="select">
+                  <span class="selected">projeto 1</span>
+                  <div class="caret"></div>
+                </div>
+                <ul class="menu">
+                  <li>criar projeto</li>
+                  <li class="active">projeto 1</li>
+                </ul>
+              </div>
+        </div>
+        <div class="sidebar-baixo">
+            <button class="logout">
+              <div class="logoutPic">
+                  <img src="../fotos/logout.png" alt="" >
+              </div>
+              <div class="logoutText">
+                  <span>Sair</span>
+              </div>
+          </button>
+        </div>
+    </section>
+    <section class="board">
+        <div class="exibicao">
+            <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+            <label for="reg-log"></label>
+        </div>
+        <button class="kanban__add-item">+ Add</button>
+        <div class="kanban">
+            <!-- <div class="kanban__column">
+                <div class="kanban__column-title">Not Started</div>
+                <div class="kanban__items">
+                    <div contenteditable class="kanban__item-input">Wash the dishes</div>
+                    <div class="kanban__dropzone"></div>
+                </div>
+                <button class="kanban__add-item" type="button">+ Add</button>
+            </div> -->
+        </div>
+    </section>
+	<script src="../js/kanban.js/main.js" type="module"></script>
+    <script src="../js/dropdown.js"></script>
+</body>
+</html>

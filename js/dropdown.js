@@ -47,3 +47,31 @@ checkBox.addEventListener('click', function(){
   }
 })
 });
+
+/* const cards = document.querySelectorAll('.content');
+const todo = document.querySelector('.to-do');
+const backlog = document.querySelector('.backlog');
+
+cards.forEach((card) => {
+  card.addEventListener('dragstart', function(e){
+    let selected = e.target;
+
+    todo.addEventListener('dragover', function(e){
+      e.preventDefault();
+    });
+
+    todo.addEventListener('drop', function(e){
+      todo.appendChild(selected);
+      selected = null;
+    })
+
+    backlog.addEventListener('dragover', function(e){
+      e.preventDefault();
+    });
+
+    backlog.addEventListener('drop', function(e){
+      backlog.appendChild(selected);
+      selected = null;
+    })
+  })
+}) */
