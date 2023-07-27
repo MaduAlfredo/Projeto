@@ -48,98 +48,62 @@
             <a href="#">+ adicionar</a>
         </div>
         <div class="dragsndrops">
-            <div class="type backlog">
+            <div class="type backlog" id="backlog" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>backlog</span>
-                <div class="content card" draggable="true">
+                <div class="content card" id="task1" draggable="true" ondragstart="drag(event)">
                     <div class="cima">
                         <div class="titulo">
                             <h3>inserindo bastante texto pra testar o card</h3>
                         </div>
+                        <div class="descricao">
+                            <p>uau aqui estou super descrevendo o card hahahaha</p>
+                        </div>
                     </div>
                     <div class="baixo">
                         <div class="ultima-linha">
-                            <div class="pessoas">
-                                <img src="../fotos/login.png" class="pessoas-foto" alt="">
-                            </div>
+                            <div><span class="data">13/08/2023</span></div>
                             <div class="dificuldade"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="type to-do">
+            <div class="type to-do" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>to do</span>
-                <div class="content card" draggable="true">
+                <div class="content card" id="task2" draggable="true" ondragstart="drag(event)">
                     <div class="cima">
                         <div class="titulo">
-                            <h3>inserindo bastante texto pra testar o card</h3>
+                            <h3>esse é o título do card, hahahaha</h3>
+                        </div>
+                        <div class="descricao">
+                            <p>descricao numero 2 eitarrrr vou me matar</p>
                         </div>
                     </div>
                     <div class="baixo">
                         <div class="ultima-linha">
-                            <div class="pessoas">
-                                <img src="../fotos/login.png" class="pessoas-foto" alt="">
-                            </div>
+                            <div><span class="data">05/07/2021</span></div>
                             <div class="dificuldade"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="type in-progress">
+            <div class="type in-progress" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>in progress</span>
-<!--                 <div class="content card" draggable="true">
-                    <div class="cima">
-                        <div class="titulo">
-                            <h3>inserindo bastante texto pra testar o card</h3>
-                        </div>
-                    </div>
-                    <div class="baixo">
-                        <div class="ultima-linha">
-                            <div class="pessoas">
-                                <img src="../fotos/login.png" class="pessoas-foto" alt="">
-                            </div>
-                            <div class="dificuldade"></div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
-            <div class="type paused">
+            <div class="type paused" id="paused" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>paused</span>
-<!--                 <div class="content card" draggable="true">
-                    <div class="cima">
-                        <div class="titulo">
-                            <h3>inserindo bastante texto pra testar o card</h3>
-                        </div>
-                    </div>
-                    <div class="baixo">
-                        <div class="ultima-linha">
-                            <div class="pessoas">
-                                <img src="../fotos/login.png" class="pessoas-foto" alt="">
-                            </div>
-                            <div class="dificuldade"></div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
-            <div class="type done">
+            <div class="type done" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>done</span>
-<!--                 <div class="content card" draggable="true">
-                    <div class="cima">
-                        <div class="titulo">
-                            <h3>inserindo bastante texto pra testar o card</h3>
-                        </div>
-                    </div>
-                    <div class="baixo">
-                        <div class="ultima-linha">
-                            <div class="pessoas">
-                                <img src="../fotos/login.png" class="pessoas-foto" alt="">
-                            </div>
-                            <div class="dificuldade"></div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
-        <script type="text/javascript" src="../js/main.js"></script>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1>esse é o título do modal que eu abri hein hehe</h1>
+                <p>descrição muito foda   insira musica do skrillex</p>
+              </div>
+        </div>
+        <script type="text/javascript" src="../js/dropdown.js"></script>
     </section>
 </body>
 </html>
