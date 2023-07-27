@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/modal.css">
     <title>Home</title>
 </head>
 <body>
@@ -20,8 +21,37 @@
             <h1 class="project_title">Seja Bem Vindo!</h1>
         </header>
         <div class="paola">
-        <img onclick="criarDiv()" src="../fotos/new icon.png" class="new_icon" id="criarDiv">
-        <h1 class="leozin">Seus Boards</h1>
+            <img src="../fotos/new icon.png" class="new_icon"  id="myButton">
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <div>
+                      <h2 class="modal-title">Novo Board</h2>
+                      <h1 class="modal-names">Nome do Board</h1>
+                      <hr>
+                      <h1 class="modal-names">Descrição do Board</h1>
+                      <hr>
+                      <h1 class="modal-names">Expectativa de Conclusão</h1>
+                      <hr>
+                      <div class="modal-elements">
+                      <h1 class="modal-names">Complexidade</h1>
+                      <div class="dropdown">
+                        <div class="select">
+                          <span class="selected">Média</span>
+                          <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                          <li>Alta</li>
+                          <li class="active">Média</li>
+                          <li>Baixa</li>
+                        </ul>
+                      </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+              <h1 class="leozin">Seus Boards</h1>
         </div>
         <div id="containerDiv" class="project_grid">      
             <div class="project_items">
@@ -32,5 +62,6 @@
         </div>
     </section>
 <script src="../js/project_funcions.js"></script>
+<script src="../js/modal.js"></script>
 </body>
 </html>

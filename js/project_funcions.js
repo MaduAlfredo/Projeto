@@ -26,3 +26,5 @@ botaoCriarDiv.addEventListener('click', criarDiv);
 //Function2
 
 //Abre o modal de cadastro do projeto
+//id="criarDiv"
+//onclick="criarDiv()" 
