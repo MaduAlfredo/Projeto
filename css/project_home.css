@@ -25,10 +25,21 @@
     background-color: transparent;
     color: white;
     padding: 0 .5rem;
+    text-align: start;
+}
+
+.profile-left p{
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: .2rem;
+}
+
+.profile-left span{
+  font-size: 10px;
 }
 
 .profile-left:hover{
-    background-color: #b0acdba7;
+    background-color: #b0acdb79;
     transition: .2s;
     border-radius: 5px;
     color: white;
@@ -207,5 +218,14 @@
 
   .menu{
     width: 11vw;
+  }
+
+  .profile-left p{
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .profile{
+    padding: 0 1rem;
   }
 }

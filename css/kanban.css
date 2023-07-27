@@ -18,7 +18,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
-    margin: 3rem 2rem;
+    margin: 2rem;
 }
 
 .type{
@@ -27,6 +27,18 @@ body{
     border-radius: 5px;
     width: 20%;
     min-height: 200px;
+}
+
+.add-atv{
+  background-color: #b0acdb;
+  width: 8%;
+  margin: 2rem 0 0 2rem;
+  padding: .8rem .5rem;
+  border-radius: 5px;
+}
+
+.add-atv a{
+  color: #fff;
 }
 
 .listas{
@@ -136,4 +148,10 @@ display: none;
 .checkbox:checked + label:before {
   transform: translateX(44px) /* rotate(-270deg) */;
   content: '\ebae';
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1700px){
+  .add-atv{
+    width: 10%;
+  }
 }
