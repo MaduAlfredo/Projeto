@@ -1,5 +1,6 @@
 @import url(./reset.css);
 @import url(./project_home.css);
+@import url(./modal.css);
 
 body{
     background-color: #181537;
@@ -90,16 +91,26 @@ body{
   background-color: #e626b0;
 }
 
-.linguagens{
-  width: 20%;
+.descricao{
+  margin: .5rem 0;
+  height: 15px;
+  overflow: hidden;
+  background-color: #181537;
+  border-radius: 5px;
+  padding: 0 .5rem;
+}
+
+.descricao p{
+  font-size: 14px;
+  color: #b0acdb;
 }
 
 .baixo{
   width: 100%;
 }
 
-.pessoas-foto{
-  border-radius: 50%;
+.data{
+  font-size: 12px;
 }
 
 .ultima-linha{
@@ -137,7 +148,7 @@ display: none;
   background-color: #491199;
   font-family: 'unicons';
   content: '\eabf';
-  z-index: 20;
+  z-index: 1;
   top: -10px;
   left: -10px;
   line-height: 36px;
@@ -148,6 +159,12 @@ display: none;
 .checkbox:checked + label:before {
   transform: translateX(44px) /* rotate(-270deg) */;
   content: '\ebae';
+}
+
+.modal-content{
+  background-color: #b0acdb;
+  height: 60vh;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1700px){

@@ -48,30 +48,34 @@ checkBox.addEventListener('click', function(){
 })
 });
 
-/* const cards = document.querySelectorAll('.content');
-const todo = document.querySelector('.to-do');
-const backlog = document.querySelector('.backlog');
+function drag(e) {
+  e.dataTransfer.setData("text", e.target.id);
+}
+
+function allowDrop(e) {
+  e.preventDefault();
+}
+
+function drop(e) {
+  e.preventDefault();
+  var data = e.dataTransfer.getData("text");
+  e.currentTarget.appendChild(document.getElementById(data));
+}
+
+const cards = document.querySelectorAll('.content');
+const modal = document.querySelector('.modal');
+const close = document.querySelector('.close')
 
 cards.forEach((card) => {
-  card.addEventListener('dragstart', function(e){
-    let selected = e.target;
-
-    todo.addEventListener('dragover', function(e){
-      e.preventDefault();
-    });
-
-    todo.addEventListener('drop', function(e){
-      todo.appendChild(selected);
-      selected = null;
-    })
-
-    backlog.addEventListener('dragover', function(e){
-      e.preventDefault();
-    });
-
-    backlog.addEventListener('drop', function(e){
-      backlog.appendChild(selected);
-      selected = null;
-    })
+  card.addEventListener('click', function(){
+    modal.style.display = 'block';
   })
-}) */
+  close.onclick = function() {
+    modal.style.display = "none";
+  };
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+})
