@@ -45,10 +45,10 @@
             <label for="reg-log"></label>
         </div>
         <div class="add-atv">
-            <a href="#">+ adicionar</a>
+            <button href="#" class="add-botao">+ adicionar</button>
         </div>
-        <div class="dragsndrops">
-            <div class="type backlog" id="backlog" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div class="real-kanban cards">
+            <div class="type-card status backlog" id="backlog" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>backlog</span>
                 <div class="content card" id="task1" draggable="true" ondragstart="drag(event)">
                     <div class="cima">
@@ -61,13 +61,13 @@
                     </div>
                     <div class="baixo">
                         <div class="ultima-linha">
-                            <div><span class="data">13/08/2023</span></div>
+                            <div><span class="data">conclusão: 13/08/2023</span></div>
                             <div class="dificuldade"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="type to-do" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="type-card status to-do" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>to do</span>
                 <div class="content card" id="task2" draggable="true" ondragstart="drag(event)">
                     <div class="cima">
@@ -80,19 +80,19 @@
                     </div>
                     <div class="baixo">
                         <div class="ultima-linha">
-                            <div><span class="data">05/07/2021</span></div>
+                            <div><span class="data">conclusão: 05/07/2021</span></div>
                             <div class="dificuldade"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="type in-progress" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="type-card status in-progress" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>in progress</span>
             </div>
-            <div class="type paused" id="paused" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="type-card status paused" id="paused" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>paused</span>
             </div>
-            <div class="type done" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="type-card status done" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>done</span>
             </div>
         </div>
@@ -100,10 +100,19 @@
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h1>esse é o título do modal que eu abri hein hehe</h1>
-                <p>descrição muito foda   insira musica do skrillex</p>
-              </div>
+                <p>descrição muito foda</p>
+            </div>
         </div>
-        <script type="text/javascript" src="../js/dropdown.js"></script>
+        <div class="add-modal">
+            <div class="add-content">
+                <h1>alexa amoleça meu pinto</h1>
+                <p>como cria card</p>
+                <button class="add-cancelar">cancelar</button>
+            </div>
+        </div>
+        <script src="../js/kanban/dragndrop.js"></script>
+        <script src="../js/kanban/visualizacao.js"></script>
+        <script src="../js/kanban/modal.js"></script>
     </section>
 </body>
 </html>

@@ -14,7 +14,7 @@ body{
     padding-top: 2rem;
 }
 
-.dragsndrops{
+.real-kanban{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,7 +22,7 @@ body{
     margin: 2rem;
 }
 
-.type{
+.type-card{
     background-color: #b0acdb;
     padding: 1rem;
     border-radius: 5px;
@@ -30,26 +30,43 @@ body{
     min-height: 200px;
 }
 
-.add-atv{
+.type-lista{
   background-color: #b0acdb;
-  width: 8%;
-  margin: 2rem 0 0 2rem;
-  padding: .8rem .5rem;
+  padding: 1rem;
   border-radius: 5px;
+  width: 110%;
+  min-height: 100px;
 }
 
-.add-atv a{
+.add-atv{
+  margin: 2rem 0 0 2rem;
+  text-align: start;
+}
+
+.add-botao{
+  background-color: #b0acdb;
+  border: none;
+  border-radius: 5px;
   color: #fff;
+  padding: .8rem 1rem;
+  font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.add-botao:hover{
+  background-color: #7874a4;
+  transition: .4s;
 }
 
 .listas{
   display: flex;
   flex-direction: column;
+  width: 85%;
 }
 
 .lista{
   background-color: #7874a4;
-  margin: 1.5rem;
+  margin: 1rem 0;
   border-radius: 15px;
   display: flex;
   box-sizing: border-box;
@@ -59,13 +76,13 @@ body{
   padding: .5rem;
 }
 
-.cards{
+/* .cards{
   margin: 1rem 1.5rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: 200px;
   gap: 2rem;
-}
+} */
 
 .card{
   background-color: #7874a4;
@@ -74,14 +91,9 @@ body{
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
-  align-items: flex-start;
   flex-direction: column;
   padding: .5rem;
-}
-
-.card img, .lista img{
-  width: 20px;
-  height: 20px;
+  max-width: 270px;
 }
 
 .dificuldade{
@@ -93,7 +105,7 @@ body{
 
 .descricao{
   margin: .5rem 0;
-  height: 15px;
+  height: 30px;
   overflow: hidden;
   background-color: #181537;
   border-radius: 5px;
@@ -161,14 +173,56 @@ display: none;
   content: '\ebae';
 }
 
+.add-modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: modalOpen 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  opacity: 0;
+  transform: scale(0.8);
+  backdrop-filter: blur(3px);
+}
+
 .modal-content{
   background-color: #b0acdb;
   height: 60vh;
   border-radius: 10px;
 }
 
+.add-content {
+  background-color: #b0acdb;
+  height: 60vh;
+  border-radius: 10px;
+  margin: 10% auto; /* Centraliza vertical e horizontalmente */
+  padding: 20px;
+  width: 80%; /* Define a largura do modal */
+}
+
+.add-cancelar{
+  border: none;
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1700px){
   .add-atv{
     width: 10%;
+  }
+  .data{
+    font-size: 10px;
+  }
+  .dificuldade{
+    width: 15px;
+    height: 15px;
+  }
+  .titulo h3{
+    font-size: 14px;
+  }
+  .descricao p{
+    font-size: 14px;
   }
 }
