@@ -1,15 +1,15 @@
 <?php
 
-
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $nome=$_POST["nome"];
-    $age=$_POST["age"];
-    $color=$_POST["color"];
+    $phone=$_POST["phone"];
+    $email=$_POST["email"];
+    $pass=$_POST["pass"];
 
     include 'conexao.php';
 
-    $query="INSERT INTO information(nome, age, color) VALUES('$nome', '$age', '$color')";
+    $query="INSERT INTO users(nome, phone, email, pass ) VALUES('$nome', '$phone', '$email', '$pass')";
 
     if(mysqli_query($conexao,$query)){
         echo"Registro inserido com sucesso!";

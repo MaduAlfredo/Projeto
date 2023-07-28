@@ -3,7 +3,7 @@
 $host = 'taskboltdb.co5yba8aprwc.sa-east-1.rds.amazonaws.com';
 $usuario = 'admin';
 $senha = '18082022';
-$banco = 'testedb';
+$banco = 'taskboltdb';
 
 // Conexão com o banco de dados
 $conexao = mysqli_connect($host, $usuario, $senha, $banco);
