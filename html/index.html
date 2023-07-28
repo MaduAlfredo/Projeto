@@ -25,29 +25,39 @@
 
             <div id="myModal" class="modal">
                 <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <div>
-                      <h2 class="modal-title">Novo Board</h2>
-                      <h1 class="modal-names">Nome do Board</h1>
-                      <hr>
-                      <h1 class="modal-names">Descrição do Board</h1>
-                      <hr>
-                      <h1 class="modal-names">Expectativa de Conclusão</h1>
-                      <hr>
-                      <div class="modal-elements">
-                      <h1 class="modal-names">Complexidade</h1>
-                      <div class="dropdown">
-                        <div class="select">
-                          <span class="selected">Média</span>
-                          <div class="caret"></div>
+                    <span class="close">&times;</span>
+                    <div>
+                        <h2 class="modal-title">Novo Board</h2>
+                    <div class="modal-elements">
+                        <h1 class="modal-names">Nome do Board</h1>
+                        <input type="text" name="board_name" class="modal-input-name">
+                    </div>
+                    <hr>
+                    <div class="modal-elements">
+                        <h1 class="modal-names">Descrição do Board</h1>
+                        <textarea name="board_desc" cols="50" rows="5" class="modal-input-desc"></textarea>
+                    </div>
+                    <hr>
+                    <div class="modal-elements">
+                        <h1 class="modal-names">Expectativa de Conclusão</h1>
+                        <input type="date" name="board_expec" class="modal-input-expec">
+                    </div>
+                    <hr>
+                    <div class="modal-elements">
+                        <h1 class="modal-names">Complexidade</h1>
+                    <div class="dropdown">
+                        <div class="select" >
+                            <span class="selected">Média</span>
+                            <div class="caret"></div>
                         </div>
                         <ul class="menu">
-                          <li>Alta</li>
-                          <li class="active">Média</li>
-                          <li>Baixa</li>
+                            <li>Alta</li>
+                            <li class="active">Média</li>
+                            <li>Baixa</li>
                         </ul>
                       </div>
                       </div>
+                      <button id="criarDiv" onclick="criarDiv()" class="modal-elements">Criar</button>
                     </div>
                 </div>
             </div>
@@ -63,5 +73,6 @@
     </section>
 <script src="../js/project_funcions.js"></script>
 <script src="../js/modal.js"></script>
+<script src="../js/dropdown.js"></script>
 </body>
 </html>

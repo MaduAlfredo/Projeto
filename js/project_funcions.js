@@ -16,15 +16,5 @@ function criarDiv() {
     novaDiv.textContent = 'Nova div criada!';
     
     // Adiciona a nova div ao contêiner
-    containerDiv.appendChild(novaDiv);
+    containerDiv.appendChild(novaDiv);    
   }
-
-// Adiciona um ouvinte de evento ao botão para chamar a função criarDiv quando o botão for clicado
-botaoCriarDiv.addEventListener('click', criarDiv);
-
-
-//Function2
-
-//Abre o modal de cadastro do projeto
-//id="criarDiv"
-//onclick="criarDiv()" 
