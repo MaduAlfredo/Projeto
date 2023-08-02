@@ -199,17 +199,77 @@ display: none;
   background-color: #b0acdb;
   height: 60vh;
   border-radius: 10px;
-  margin: 10% auto; /* Centraliza vertical e horizontalmente */
+  margin: 10% auto;
   padding: 20px;
-  width: 80%; /* Define a largura do modal */
+  width: 60%;
 }
 
-.add-cancelar{
+.form-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  height: 50vh;
+}
+
+
+.form-content label{
+  font-size: 20px;
+  color: #181537;
+}
+
+.add-content input{
+  padding: .5rem;
   border: none;
+  border-radius: 5px;
+  outline-color: #491199;
+  font-size: 18px;
+}
+
+.add-esquerda, .add-direita{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#descricaoTask{
+  border: none;
+  border-radius: 5px;
+  outline-color: #491199;
+  font-size: 18px;
+}
+
+.add-botoes button{
+  border: none;
+  background-color: #7874a4;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  margin: 0 .5rem;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.add-botoes button:hover, .modal-select:hover{
+  background-color: #181537;
+  transition: .2s;
+}
+
+.modal-dropdown{
+  margin: 0;
 }
 
 .modal-menu{
   background-color: #7874a4;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.modal-select{
+  background-color: #7874a4;
+  width: 20vw;
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1700px){
@@ -228,5 +288,8 @@ display: none;
   }
   .descricao p{
     font-size: 14px;
+  }
+  .modal-select, .modal-menu{
+    width: 18vw;
   }
 }

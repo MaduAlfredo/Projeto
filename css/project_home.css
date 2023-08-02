@@ -50,13 +50,9 @@
 }
  
   .dropdown {
-    min-width: 15em;
+    min-width: 15rem;
     position: relative;
-    margin: 2em;
-  }
-  
-  .dropdown * {
-    box-sizing: border-box;
+    margin: 2rem;
   }
   
   .select {
@@ -67,7 +63,7 @@
     align-items: center;
     border: 2px #b0acdb solid;
     border-radius: 0.5em;
-    padding: 1em;
+    padding: 1rem;
     cursor: pointer;
     transition: background 0.3s;
   }

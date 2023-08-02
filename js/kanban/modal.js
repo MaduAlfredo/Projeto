@@ -5,7 +5,7 @@ const addModal = document.querySelector('.add-modal');
 
 const close = document.querySelector('.close');
 const add = document.querySelector('.add-botao');
-const cancel = document.querySelector('.add-cancelar')
+const cancel = document.querySelector('.add-cancel');
 
 cards.forEach((card) => {
   card.addEventListener('click', function(){

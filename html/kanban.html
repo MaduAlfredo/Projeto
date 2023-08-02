@@ -105,36 +105,45 @@
         </div>
         <div class="add-modal">
             <div class="add-content">
-                <label for="nomeTask">nome da tarefa:</label>
-                <input type="text" id="nomeTask"><br>
-                <label for="descricaoTask">descrição da tarefa:</label>
-                <input type="text" id="descricaoTask"><br>
-                <label for="diff">dificuldade:</label>
-                <div class="dropdown" id="diff">
-                    <div class="select">
-                      <span class="selected">média</span>
-                      <div class="caret"></div>
+                <form action="" class="form-content">
+                    <div class="add-esquerda">
+                        <label for="nomeTask">nome da tarefa:</label>
+                        <input type="text" id="nomeTask" autofocus>
+                        <label for="descricaoTask">descrição da tarefa:</label>
+                        <textarea rows="8" cols="35" id="descricaoTask"></textarea>
                     </div>
-                    <ul class="menu modal-menu">
-                      <li>baixa</li>
-                      <li class="active">média</li>
-                      <li>alta</li>
-                    </ul>
-                </div>
-                <label for="type">tipo da tarefa:</label>
-                <div class="dropdown" id="type">
-                    <div class="select">
-                      <span class="selected">bug</span>
-                      <div class="caret"></div>
+                    <div class="add-direita">
+                        <label for="diff">dificuldade:</label>
+                        <div class="dropdown modal-dropdown" id="diff">
+                            <div class="select modal-select">
+                                <span class="selected">média</span>
+                                <div class="caret"></div>
+                            </div>
+                            <ul class="menu modal-menu">
+                                <li>baixa</li>
+                                <li class="active">média</li>
+                                <li>alta</li>
+                            </ul>
+                        </div>
+                            <label for="type">tipo da tarefa:</label>
+                            <div class="dropdown modal-dropdown" id="type">
+                                <div class="select modal-select">
+                                  <span class="selected">bug</span>
+                                  <div class="caret"></div>
+                                </div>
+                                <ul class="menu modal-menu">
+                                  <li>story</li>
+                                  <li class="active">bug</li>
+                                  <li>task</li>
+                                  <li>spike</li>
+                                </ul>
+                            </div>
                     </div>
-                    <ul class="menu modal-menu">
-                      <li>story</li>
-                      <li class="active">bug</li>
-                      <li>task</li>
-                      <li>spike</li>
-                    </ul>
+                </form>
+                <div class="add-botoes">
+                    <button class="add-cancel">cancelar</button>
+                    <button class="add-save">salvar</button>
                 </div>
-                <button class="add-cancelar">cancelar</button>
             </div>
         </div>
         <script src="../js/kanban/dragndrop.js"></script>
