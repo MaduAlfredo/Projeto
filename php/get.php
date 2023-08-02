@@ -42,7 +42,7 @@ if(!resultado){
 
 echo "<table>";
 echo "<tr><th>ID</th><th>Nome</th><th>Email</th></tr>";
-while ($linha = mysqli_fetch_assoc($resultado)) {
+while ($linha = mysqli_fetch_assoc($results)) {
     echo "<tr>";
     echo "<td>" . $linha['id'] . "</td>";
     echo "<td>" . $linha['nome'] . "</td>";
