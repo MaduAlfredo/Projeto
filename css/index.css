@@ -1,5 +1,4 @@
 @import url(./reset.css);
-@import url(project_home.css);
 
 .project {
     width: 100%;
@@ -18,12 +17,13 @@
     text-align: center;
     font-size: 40px;
     color: white;
-    padding-left: 21%;
+    padding-left: 7%;
 }
 
 .new_icon {
     width: 3%;
     margin: 1% 15%;
+    cursor: pointer;
 }
 
 .project_grid {
@@ -56,17 +56,18 @@
     font-size: 18px;
 }
 
-.jurema {
+.logout-home {
     width: 20%;
-    margin-left: 12px;
+    margin: 0 40%;
+    cursor: pointer;
 }
 
 .paola{
     display: flex;
 }
 
-.leozin{
-    padding-left: 250px ;
+.title2-home{
+    padding-left: 5em ;
     color: white;
     font-size: 30px;
 }
@@ -87,11 +88,11 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #ACB8C0;
+    background-color: #181537;
     border-radius: 10px;
     margin: 0 20px;
-    width: 8%;
-    height: 100px;
+    width: 10em;
+    height: 5em;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
