@@ -208,6 +208,10 @@ display: none;
   border: none;
 }
 
+.modal-menu{
+  background-color: #7874a4;
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1700px){
   .add-atv{
     width: 10%;
