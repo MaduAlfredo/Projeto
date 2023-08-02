@@ -26,7 +26,7 @@
                   <li>criar projeto</li>
                   <li class="active">projeto 1</li>
                 </ul>
-              </div>
+            </div>
         </div>
         <div class="sidebar-baixo">
             <button class="logout">
@@ -105,14 +105,42 @@
         </div>
         <div class="add-modal">
             <div class="add-content">
-                <h1>alexa amoleça meu pinto</h1>
-                <p>como cria card</p>
+                <label for="nomeTask">nome da tarefa:</label>
+                <input type="text" id="nomeTask"><br>
+                <label for="descricaoTask">descrição da tarefa:</label>
+                <input type="text" id="descricaoTask"><br>
+                <label for="diff">dificuldade:</label>
+                <div class="dropdown" id="diff">
+                    <div class="select">
+                      <span class="selected">média</span>
+                      <div class="caret"></div>
+                    </div>
+                    <ul class="menu modal-menu">
+                      <li>baixa</li>
+                      <li class="active">média</li>
+                      <li>alta</li>
+                    </ul>
+                </div>
+                <label for="type">tipo da tarefa:</label>
+                <div class="dropdown" id="type">
+                    <div class="select">
+                      <span class="selected">bug</span>
+                      <div class="caret"></div>
+                    </div>
+                    <ul class="menu modal-menu">
+                      <li>story</li>
+                      <li class="active">bug</li>
+                      <li>task</li>
+                      <li>spike</li>
+                    </ul>
+                </div>
                 <button class="add-cancelar">cancelar</button>
             </div>
         </div>
         <script src="../js/kanban/dragndrop.js"></script>
         <script src="../js/kanban/visualizacao.js"></script>
         <script src="../js/kanban/modal.js"></script>
+        <script src="../js/dropdown.js"></script>
     </section>
 </body>
 </html>
