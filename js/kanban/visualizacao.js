@@ -24,19 +24,9 @@ checkBox.addEventListener('click', function(){
     }
 })
 
-function enviarDados(){
-  const listaSelecao = document.getElementById("selecao").children;
-            const dadosParaEnviar = [];
 
-            for (let i = 0; i < listaSelecao.length; i++) {
-                dadosParaEnviar.push(listaSelecao[i].textContent);
-            }
+const botao = document.querySelector('.profile-left');
 
-            // Chamada de função para enviar os dados para o servidor
-            enviarDadosParaServidor(dadosParaEnviar);
-        }
-
-        function enviarDadosParaServidor(dados) {
-            // Implementar o envio dos dados para o servidor aqui
-            // Você pode usar AJAX ou Fetch API para enviar os dados para o backend.
-        }
+botao.onclick = () => {
+  location = './settings.html';
+}

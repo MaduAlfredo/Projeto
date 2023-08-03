@@ -103,17 +103,17 @@
     }
   }
 
-  .dropdown-home-kanban {
+  .dropdown-kanban {
     min-width: 7em;
     position: relative;
     margin: 0em 2em;
   }
   
-  .dropdown-home-kanban * {
+  .dropdown-kanban * {
     box-sizing: border-box;
   }
   
-  .select-home-kanban {
+  .select-kanban {
     background: #7168CD;
     color: #fff;
     display: flex;
@@ -132,11 +132,11 @@
     box-shadow: 0 0 0.8em #26489a;
   }
   
-  .select-home-kanban:hover {
+  .select-kanban:hover {
     background: #363262;
   }
   
-  .caret-home-kanban {
+  .caret-kanban {
     width: 0;
     height: 0;
     border-left: 5px solid transparent;
@@ -150,7 +150,7 @@
     transform: rotate(180deg);
   }
   
-  .menu-home-kanban {
+  .menu-kanban {
     list-style: none;
     padding: 0.2em 0.5em;
     background: #7168CD;
@@ -169,18 +169,18 @@
     z-index: 1;
   }
   
-  .menu-home-kanban li {
+  .menu-kanban li {
     padding: 0.7em 0.5em;
     margin: 0.3em 0;
     border-radius: 0.5em;
     cursor: pointer;
   }
   
-  .menu-home-kanban li:hover {
+  .menu-kanban li:hover {
     background: #363262;
   }
   
-  .active-home-kanban {
+  .active-kanban {
     background: #363262;
   }
   
