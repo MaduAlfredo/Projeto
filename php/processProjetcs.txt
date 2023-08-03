@@ -34,6 +34,7 @@ if($_SERVER["RESQUEST_METHOD"] == "POST"){
 
     include 'conexao.php'
 
-    $query = "INSERT INTO projects(board_name, board_desc, complex)"
+    //$query = "INSERT INTO projects(board_name, board_desc, complex)";
 
 }
+?>

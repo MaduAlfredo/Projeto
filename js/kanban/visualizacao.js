@@ -23,3 +23,10 @@ checkBox.addEventListener('click', function(){
       view.classList.replace('listas', 'cards');
     }
 })
+
+
+const botao = document.querySelector('.profile-left');
+
+botao.onclick = () => {
+  location = './settings.html';
+}
