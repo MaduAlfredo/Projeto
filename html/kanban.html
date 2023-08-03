@@ -23,9 +23,49 @@
                   <div class="caret"></div>
                 </div>
                 <ul class="menu">
-                  <li>criar projeto</li>
+                  <li id="myButton-kanban">criar projeto</li>
                   <li class="active">projeto 1</li>
                 </ul>
+
+                <div id="myModal-kanban" class="modal-kanban">
+                    <div class="modal-content-kanban">
+                        <span class="close-kanban">&times;</span>
+                        <div>
+                            <h2 class="modal-title-kanban">Novo Board</h2>
+                        <div class="modal-elements-kanban">
+                            <h1 class="modal-names-kanban">Nome do Board</h1>
+                            <input type="text-kanban" name="board_name-kanban" class="modal-input-name-kanban">
+                        </div>
+                        <hr>
+                        <div class="modal-elements-kanban">
+                            <h1 class="modal-names-kanban">Descrição do Board</h1>
+                            <textarea name="board_desc-kanban" cols="50" rows="5" class="modal-input-desc-kanban"></textarea>
+                        </div>
+                        <hr>
+                        <div class="modal-elements-kanban">
+                            <h1 class="modal-names-kanban">Expectativa de Conclusão</h1>
+                            <input type="date" name="board_expec-kanban" class="modal-input-expec-kanban">
+                        </div>
+                        <hr>
+                        <div class="modal-elements-kanban">
+                            <h1 class="modal-names-kanban">Complexidade</h1>
+                        <div class="dropdown-home-kanban">
+                            <div class="select-home-kanban" >
+                                <span class="selected-home-kanban">Média</span>
+                                <div class="caret-home-kanban"></div>
+                            </div>
+                            <ul class="menu-home-kanban">
+                                <li>Alta</li>
+                                <li class="active-home-kanban">Média</li>
+                                <li>Baixa</li>
+                            </ul>
+                          </div>
+                          </div>
+                          <button id="criarDiv-kanban" onclick="criarDiv()" class="modal-elements-kanban">Criar</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="sidebar-baixo">
@@ -150,6 +190,7 @@
         <script src="../js/kanban/visualizacao.js"></script>
         <script src="../js/kanban/modal.js"></script>
         <script src="../js/dropdown.js"></script>
+        <script src="../js/kanban/modal-proj.js"></script>
     </section>
 </body>
 </html>
