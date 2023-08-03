@@ -145,7 +145,7 @@
         </div>
         <div class="add-modal">
             <div class="add-content">
-                <form action="" class="form-content">
+                <form action="POST" class="form-content">
                     <div class="add-esquerda">
                         <label for="nomeTask">nome da tarefa:</label>
                         <input type="text" id="nomeTask" autofocus>
@@ -171,19 +171,19 @@
                                   <span class="selected">bug</span>
                                   <div class="caret"></div>
                                 </div>
-                                <ul class="menu modal-menu">
+                                <ul class="menu modal-menu" id="selecao">
                                   <li>story</li>
-                                  <li class="active">bug</li>
+                                  <li>bug</li>
                                   <li>task</li>
                                   <li>spike</li>
                                 </ul>
                             </div>
                     </div>
+                    <div class="add-botoes">
+                        <button class="add-cancel">cancelar</button>
+                        <button class="add-save" onclick="enviarDados()">salvar</button>
+                    </div>
                 </form>
-                <div class="add-botoes">
-                    <button class="add-cancel">cancelar</button>
-                    <button class="add-save">salvar</button>
-                </div>
             </div>
         </div>
         <script src="../js/kanban/dragndrop.js"></script>

@@ -23,3 +23,20 @@ checkBox.addEventListener('click', function(){
       view.classList.replace('listas', 'cards');
     }
 })
+
+function enviarDados(){
+  const listaSelecao = document.getElementById("selecao").children;
+            const dadosParaEnviar = [];
+
+            for (let i = 0; i < listaSelecao.length; i++) {
+                dadosParaEnviar.push(listaSelecao[i].textContent);
+            }
+
+            // Chamada de função para enviar os dados para o servidor
+            enviarDadosParaServidor(dadosParaEnviar);
+        }
+
+        function enviarDadosParaServidor(dados) {
+            // Implementar o envio dos dados para o servidor aqui
+            // Você pode usar AJAX ou Fetch API para enviar os dados para o backend.
+        }

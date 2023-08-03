@@ -1,54 +1,40 @@
-// Estabelecer a conexão com o banco de dados
-$conexao = mysqli_connect($host, $usuario, $senha, $banco);
-
-// Verificar se a conexão foi bem-sucedida
-if (!$conexao) {
-    die("Falha na conexão: " . mysqli_connect_error());
-}
-
-// Executar a consulta SQL
-$query = "SELECT * FROM tabela_exemplo";
-$resultado = mysqli_query($conexao, $query);
-
-// Verificar se a consulta foi bem-sucedida
-if (!$resultado) {
-    die("Erro na consulta: " . mysqli_error($conexao));
-}
-
-// Apresentar os dados
-echo "<table>";
-echo "<tr><th>ID</th><th>Nome</th><th>Email</th></tr>";
-while ($linha = mysqli_fetch_assoc($resultado)) {
-    echo "<tr>";
-    echo "<td>" . $linha['id'] . "</td>";
-    echo "<td>" . $linha['nome'] . "</td>";
-    echo "<td>" . $linha['email'] . "</td>";
-    echo "</tr>";
-}
-echo "</table>";
-
-// Fechar a conexão com o banco de dados
-mysqli_close($conexao);
-?>
-
 <?php
+// Inclua o arquivo de conexão que criamos anteriormente
+include('conexao.php');
 
-$query = "SELECT * FROM users";
-$results = mysqli_query($query);
+// Consulta para buscar os dados do banco de dados (Exemplo com uma tabela "usuarios")
+$sql = "SELECT * FROM users";
+$resultado = $conexao->query($sql); // Corrigindo a execução da consulta usando $conn
 
-if(!resultado){
-    die("Erro na consulta :(")
-}
-
-echo "<table>";
-echo "<tr><th>ID</th><th>Nome</th><th>Email</th></tr>";
-while ($linha = mysqli_fetch_assoc($results)) {
-    echo "<tr>";
-    echo "<td>" . $linha['id'] . "</td>";
-    echo "<td>" . $linha['nome'] . "</td>";
-    echo "<td>" . $linha['email'] . "</td>";
-    echo "</tr>";
-}
-echo "</table>"; 
-
+// Fechar conexão com o banco de dados
+$conexao->close();
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dados do Banco de Dados</title>
+</head>
+<body>
+    <h1>Dados do Banco de Dados</h1>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+        </tr>
+        <?php
+        // Exibir os dados na tabela
+        if ($resultado->num_rows > 0) {
+            while ($row = $resultado->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["nome"] . "</td>";
+                echo "<td>" . $row["email"] . "</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='2'>Nenhum dado encontrado</td></tr>";
+        }
+        ?>
+    </table>
+</body>
+</html>
