@@ -3,33 +3,18 @@
 include_once 'conexao.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    if (isset($_POST["res"])) {
-        // Recebe os dados enviados pelo frontend
-        $dadosString = $_POST["res"];
-        // Converte a string em um array
-        $dados = explode(", ", $dadosString);
-        // Agora você pode usar o array $dados conforme necessário em sua consulta SQL
+    $taskTitle = $_POST["task_title"];
+    $taskDesc = $_POST["task_desc"];
+    $opcao = $_POST["taskType"];
 
-        $taskName = $_POST["nomeTask"];
-        $taskDesc = $_POST["descricaoTask"];
+    $query = "INSERT INTO tasks(task_name, task_desc, task_type) VALUES('$taskTitle', '$taskDesc', '$opcao')";
 
-        $dadosString = implode(", ", $dados);
-        
-
-        $query = "INSERT INTO tasks(task_name, task_desc, task_type) VALUES('$taskName', '$taskDesc', '$dadosString')";
-    
-        if(mysqli_query($conexao,$query)){
-            echo"Registro inserido com sucesso!";
-        } else {
-            echo"Erro ao inserir registro: ".mysqli_error($conexao);
-        }
-        mysqli_close($conexao);
+    if(mysqli_query($conexao,$query)){
+        echo"Registro inserido com sucesso!";
+    } else {
+        echo"Erro ao inserir registro: ".mysqli_error($conexao);
     }
 
-    var_dump($_POST);
-}else{
-    echo 'burro';
+    mysqli_close($conexao);
 }
-
-
 ?>
