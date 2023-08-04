@@ -61,7 +61,8 @@ body{
 .listas{
   display: flex;
   flex-direction: column;
-  width: 85%;
+  width: 65%;
+  margin-left: 15%;
 }
 
 .lista{
@@ -75,14 +76,6 @@ body{
   flex-direction: column;
   padding: .5rem;
 }
-
-/* .cards{
-  margin: 1rem 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 200px;
-  gap: 2rem;
-} */
 
 .card{
   background-color: #7874a4;
@@ -112,12 +105,25 @@ body{
   padding: 0 .5rem;
 }
 
+ .descricao-card{
+    width: 13vw;
+  } 
+
+.descricao-lista{
+  width: 100%;
+  padding: .5rem;
+}
+
 .descricao p{
   font-size: 14px;
   color: #b0acdb;
 }
 
-.baixo{
+.cima{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
 }
 

@@ -89,51 +89,43 @@
             <button href="#" class="add-botao">+ adicionar</button>
         </div>
         <div class="real-kanban cards">
-            <div class="type-card status backlog" id="backlog" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="type-card status" id="backlog" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>backlog</span>
                 <div class="content card" id="task1" draggable="true" ondragstart="drag(event)">
                     <div class="cima">
                         <div class="titulo">
                             <h3>inserindo bastante texto pra testar o card</h3>
                         </div>
-                        <div class="descricao">
+                        <div class="descricao descricao-card">
                             <p>uau aqui estou super descrevendo o card hahahaha</p>
                         </div>
                     </div>
-                    <div class="baixo">
-                        <div class="ultima-linha">
-                            <div><span class="data">conclusão: 13/08/2023</span></div>
-                            <div class="dificuldade"></div>
-                        </div>
-                    </div>
+                    <div class="dificuldade"></div>
                 </div>
             </div>
-            <div class="type-card status to-do" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="type-card status" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>to do</span>
                 <div class="content card" id="task2" draggable="true" ondragstart="drag(event)">
                     <div class="cima">
                         <div class="titulo">
                             <h3>esse é o título do card, hahahaha</h3>
                         </div>
-                        <div class="descricao">
-                            <p>descricao numero 2 eitarrrr vou me matar</p>
+                        <div class="descricao descricao-card">
+                            <p>descricao numero 2 eitarrrr vou me matar aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
                         </div>
                     </div>
                     <div class="baixo">
-                        <div class="ultima-linha">
-                            <div><span class="data">conclusão: 05/07/2021</span></div>
-                            <div class="dificuldade"></div>
-                        </div>
+                        <div class="dificuldade"></div>
                     </div>
                 </div>
             </div>
-            <div class="type-card status in-progress" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="type-card status" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>in progress</span>
             </div>
-            <div class="type-card status paused" id="paused" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="type-card status" id="paused" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>paused</span>
             </div>
-            <div class="type-card status done" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div class="type-card status" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>done</span>
             </div>
         </div>

@@ -1,36 +1,22 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color:#181537;
-}
-  
-.login img{
-    width:60px;
-    margin-left:1700%;
-    margin-bottom:1000%;
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+body{
+    margin: 0%;
+    padding: 0%;
+    background-image: url(splash.jpg);
+    background-size:96%;
+    background-attachment: fixed;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:84%;
+.icon img{
+    width:60px;
 }
+.img-icon{
+    float: right;
+    margin:2.5%;
+}
+
+
   
-.centered-icon {
-    text-align: center;
-}
-  
-footer {
-    text-align: center;
-}
-footer p{
-    color:white;
-    font-size: large;
-    letter-spacing:3px;
-}
-footer img{
-    width:30px;
-    padding:5px;
+.img-icon:hover{
+    transform: scale(1.1); /* Aumenta o tamanho do ícone em 20% no hover */
 }
