@@ -146,12 +146,12 @@
         </div>
         <div class="add-modal">
             <div class="add-content">
-                <form action="POST" class="form-content">
+                <form action="../php/processtasks.php" method="POST" class="form-content">
                     <div class="add-esquerda">
                         <label for="nomeTask">nome da tarefa:</label>
-                        <input type="text" id="nomeTask" autofocus>
+                        <input type="text" id="nomeTask" name="nomeTask" autofocus>
                         <label for="descricaoTask">descrição da tarefa:</label>
-                        <textarea rows="8" cols="35" id="descricaoTask"></textarea>
+                        <textarea rows="8" cols="35" id="descricaoTask" name="descricaoTask"></textarea>
                     </div>
                     <div class="add-direita">
                         <label for="diff">dificuldade:</label>
@@ -178,11 +178,12 @@
                                   <li>task</li>
                                   <li>spike</li>
                                 </ul>
+                                <input type="hidden" id="dadosHidden" name="dados" value="">
                             </div>
                     </div>
                     <div class="add-botoes">
                         <button class="add-cancel">cancelar</button>
-                        <button class="add-save" onclick="enviarDados()">salvar</button>
+                        <button type="submit" class="add-save" onclick="enviarDados()">salvar</button>
                     </div>
                 </form>
             </div>

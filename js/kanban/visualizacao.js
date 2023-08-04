@@ -24,6 +24,44 @@ checkBox.addEventListener('click', function(){
     }
 })
 
+/* async function enviarDados(){
+  const listaSelecao = document.getElementById("selecao").children;
+      const dadosParaEnviar = [];
+
+      for (let i = 0; i < listaSelecao.length; i++) {
+        dadosParaEnviar.push(listaSelecao[i].textContent);
+      }
+      
+      enviarDadosParaServidor(dadosParaEnviar);
+    }
+   */
+const formulario = document.querySelector('.form-content');
+
+formulario.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const dadosForm = new FormData(formulario);
+  dadosForm.append('dados', e.join(', '));
+
+  const data = await fetch('../../php/processtasks.php', {
+    method: 'POST',
+    body: dadosForm
+  })
+
+  const res = await data.json();
+})
+/* async function enviarDadosParaServidor(dados) {
+      // Cria um objeto FormData para enviar os dados do formulário
+  const formData = new FormData();
+  formData.append('dados', dados.join(', ')); // Junte os dados em uma única string
+
+  const data =  await fetch('../../php/processtasks.php', {
+    method: 'POST',
+    body: formData
+  });
+
+    const res = await data.json();
+} */
 
 const botao = document.querySelector('.profile-left');
 
