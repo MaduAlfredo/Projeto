@@ -4,6 +4,7 @@ checkBox.addEventListener('click', function(){
   var view = document.querySelector('.real-kanban');
   var elements = document.querySelectorAll('.content');
   var types = document.querySelectorAll('.status');
+  var descricoes = document.querySelectorAll('.descricao');
 
   if (checkBox.checked){
     elements.forEach(element => {
@@ -11,6 +12,9 @@ checkBox.addEventListener('click', function(){
     });
     types.forEach(type => {
         type.classList.replace('type-card', 'type-lista');
+    })
+    descricoes.forEach(descricao => {
+      descricao.classList.replace('descricao-card', 'descricao-lista');
     })
     view.classList.replace('cards', 'listas');
     } else {
@@ -20,9 +24,13 @@ checkBox.addEventListener('click', function(){
       types.forEach(type => {
         type.classList.replace('type-lista', 'type-card');
       })
+      descricoes.forEach(descricao => {
+        descricao.classList.replace('descricao-lista', 'descricao-card');
+      })
       view.classList.replace('listas', 'cards');
     }
 })
+
 
 /* async function enviarDados(){
   const listaSelecao = document.getElementById("selecao").children;
