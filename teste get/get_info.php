@@ -13,9 +13,10 @@ if (mysqli_connect_errno()) {
     die('Falha na conexão com o banco de dados: ' . mysqli_connect_error());
 }
 else{
+
 // Query para obter as informações do banco de dados
 try {
-    $stmt = $conn->query("SELECT * FROM tabela_info");
+    $stmt = $conn->query("SELECT * FROM projects");
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     echo "Erro na consulta ao banco de dados: " . $e->getMessage();
