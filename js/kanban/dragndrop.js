@@ -11,3 +11,9 @@ function drag(e) {
     var data = e.dataTransfer.getData("text");
     e.currentTarget.appendChild(document.getElementById(data));
   }
+
+  const botaoSair = document.querySelector('.logout');
+
+  botaoSair.onclick = function(){
+    location = './splash.html';
+  }
