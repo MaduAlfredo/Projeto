@@ -11,7 +11,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
 }
-
+else{
 // Iniciar a sessão
 session_start();
 
@@ -42,4 +42,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
+}
 ?>
