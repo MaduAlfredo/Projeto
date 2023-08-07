@@ -2,21 +2,24 @@
 body{
     margin: 0%;
     padding: 0%;
-    background-image: url(splash.jpg);
+    background-image: url(../fotos/splash.jpg);
     background-size:96%;
     background-attachment: fixed;
 }
 
-.icon img{
-    width:60px;
-}
-.img-icon{
-    float: right;
-    margin:2.5%;
+.icon{
+    float:right;
+    margin:3%;
 }
 
-
-  
-.img-icon:hover{
-    transform: scale(1.1); /* Aumenta o tamanho do ícone em 20% no hover */
+.login{
+    border:none;
+    width:90px;
+    height:35px;
+    border-radius:5px;
+    color:#7168CD;
+    font-size: medium;
+}
+.login:hover{
+    border:1.5px #7168CD solid;
 }
