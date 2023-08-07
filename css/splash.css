@@ -19,6 +19,7 @@ body{
     border-radius:5px;
     color:#7168CD;
     font-size: medium;
+    background-color:transparent;
 }
 .login:hover{
     border:1.5px #7168CD solid;
