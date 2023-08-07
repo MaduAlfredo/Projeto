@@ -1,15 +1,18 @@
 <?php
 // Conexão com o banco de dados
-$servername = "localhost"; // ou endereço IP do servidor
-$username = "admin";
-$password = "18082022";
-$dbname = "taskboltdb";
+//$servername = "localhost"; // ou endereço IP do servidor
+//$username = "admin";
+//$password = "18082022";
+//$dbname = "taskboltdb";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+include_once 'conexao.php';
+
+//$conexao = new mysqli($servername, $username, $password, $dbname);
+
 
 // Verificar a conexão
-if ($conn->connect_error) {
-    die("Falha na conexão: " . $conn->connect_error);
+if ($conexao->connect_error) {
+    die("Falha na conexão: " . $conexao->connect_error);
 }
 else{
 // Iniciar a sessão
@@ -20,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha = $_POST['pass'];
 
     // Consulta preparada para evitar injeção de SQL
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+    $stmt = $conexao->prepare("SELECT * FROM users WHERE email = ?");
     $stmt->bind_param("s", $login);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -41,6 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
 }
 
-$conn->close();
+$conexao->close();
 }
 ?>
