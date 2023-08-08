@@ -1,14 +1,11 @@
 <?php
-// Inicia a sessão para ter acesso às informações do usuário logado
 session_start();
 
-// Verifica se o usuário está logado (se o nome de usuário está armazenado na sessão)
-if (!isset($_SESSION["email"])) {
-    // Se não estiver logado, redireciona para a página de login
-    header("Location: index.php");
-    exit();
-
-} ?>
+    if (!isset($_SESSION["email"])) {
+        header("Location: index.php");
+        exit();
+    }
+?>
 
 
 <!DOCTYPE html>
