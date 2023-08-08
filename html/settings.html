@@ -1,46 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Taskbolt | Configurações</title>
     <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
 </head>
 <body>
-    <div class="sidebar">
-        <img src="../fotos/mr.incredible.png" class="icon_photo">
-        <p class="icon_font">Maria Eduarda</p>
-        <div class="rovena">
-            <img src="../fotos/user_icon.png">
-            <h1 class="sidebar_items">Sua conta</h1>
-        </div>
-        <div class="rovena">
-            <img src="../fotos/lock_icon.png">
-            <h1 class="sidebar_items">Segurança</h1>
-        </div>
-        <div class="rovena">
-            <a href="index.html"><img src="../fotos/logout.png">
-            <h1 class="sidebar_items">Sair</h1></a>
-        </div>
-    </div>
-    <div class="settings">
-        <div class="settings_top">
-            <img src="../fotos/mr.incredible.png" class="settings_photo">
-            <div>
-                <button class="settings_btn">Remover foto</button>
-                <button class="settings_btn">Editar Dados</button>
+    <section class="project_sidebar">
+        <div class="sidebar-cima">
+            <div class="return">
+                <a href="./kanban.html" class="retornar">Retornar aos seus projetos</a>
+            </div>
+            <div class="profile">
+                <a href="./settings.html" class="suas-infos">Suas informações</a>
+                <a href="#" class="seguranca">Segurança</a>
+                <a href="#" class="verificacao">Verificações</a>
             </div>
         </div>
-            <hr>
-            <h1 class="settings_elements">Nome:</h1>
-            <hr>
-            <h1 class="settings_elements">Número:</h1>
-            <hr>
-            <h1 class="settings_elements">E-mail:</h1>
-            <hr>
-            <h1 class="settings_elements">Senha:</h1>
-            <hr>
-    </div>
+        <div class="sidebar-baixo">
+            <a class="logout">Sair</a>
+        </div>
+    </section>
+    <section class="infos">
+        <article class="showing-infos">
+            <div class="infos-cima">
+                <img src="../fotos/user_icon.png" class="profile-pic">
+                <h1>Olá, valorant da silva</h1>
+            </div>
+            <div class="infos-meio">
+                <div class="user">
+                    <h2>Nome de usuário</h2>
+                    <p>@valorantdasilva</p>
+                </div>
+                <div class="email">
+                    <h2>E-mail</h2>
+                    <p>valorantmacedo@gmail.com</p>
+                </div>
+                <div class="telefone">
+                    <h2> Número de telefone</h2>
+                    <p>(41) 99999-9999</p>
+                </div>
+            </div>
+            <button class="edit-button">Editar informações</button>
+        </article>
+    </section>
 </body>
 </html>
