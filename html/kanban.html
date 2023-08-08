@@ -27,28 +27,23 @@
                   <li id="myButton-kanban">+ Criar projeto</li>
                   <li class="active">Projeto 1</li>
                 </ul>
-                <div id="myModal-kanban" class="modal-kanban">
+                <form id="myModal-kanban" class="modal-kanban">
                     <div class="modal-content-kanban">
-                        <span class="close-kanban">&times;</span>
-                        <div>
-                            <h2 class="modal-title-kanban">Novo Board</h2>
+                        <h1 class="modal-title-kanban">Novo Projeto</h1>
                         <div class="modal-elements-kanban">
-                            <h1 class="modal-names-kanban">Nome do Board</h1>
-                            <input type="text-kanban" name="board_name-kanban" class="modal-input-name-kanban">
+                            <h2>Nome do Projeto:</h2>
+                            <input type="text" name="board_name-kanban">
                         </div>
-                        <hr>
                         <div class="modal-elements-kanban">
-                            <h1 class="modal-names-kanban">Descrição do Board</h1>
-                            <textarea name="board_desc-kanban" cols="50" rows="5" class="modal-input-desc-kanban"></textarea>
+                            <h2>Descrição do Projeto:</h2>
+                            <textarea name="board_desc-kanban" cols="50" rows="5"></textarea>
                         </div>
-                        <hr>
                         <div class="modal-elements-kanban">
-                            <h1 class="modal-names-kanban">Expectativa de Conclusão</h1>
-                            <input type="date" name="board_expec-kanban" class="modal-input-expec-kanban">
+                            <h2>Expectativa de Conclusão:</h2>
+                            <input type="date" name="board_expec-kanban" id="modal-date-kanban">
                         </div>
-                        <hr>
                         <div class="modal-elements-kanban">
-                            <h1 class="modal-names-kanban">Complexidade</h1>
+                            <h2>Complexidade:</h2>
                         <div class="dropdown-kanban">
                             <div class="select-kanban" >
                                 <span class="selected-kanban">Média</span>
@@ -59,25 +54,20 @@
                                 <li class="active-kanban">Média</li>
                                 <li>Baixa</li>
                             </ul>
-                          </div>
-                          </div>
-                          <button id="criarDiv-kanban" onclick="criarDiv()" class="modal-elements-kanban">Criar</button>
+                        </div>
+                        </div>
+                        <div class="modal-botoes-kanban">
+                            <button class="modal-save">Cancelar</button>
+                            <button class="modal-cancel" type="submit">Criar</button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
         <div class="sidebar-baixo">
-            <button class="logout">
-              <div class="logoutPic">
-                  <img src="../fotos/logout.png" alt="" >
-              </div>
-              <div class="logoutText">
-                <span>Sair</span>
-              </div>
-          </button>
+            <a class="logout">Sair</a>
         </div>
-    </section>
+        </section>
     <section class="board">
         <div class="exibicao">
             <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
