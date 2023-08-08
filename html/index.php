@@ -1,3 +1,16 @@
+<?php
+// Inicia a sessão para ter acesso às informações do usuário logado
+session_start();
+
+// Verifica se o usuário está logado (se o nome de usuário está armazenado na sessão)
+if (!isset($_SESSION["email"])) {
+    // Se não estiver logado, redireciona para a página de login
+    header("Location: index.php");
+    exit();
+
+} ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,7 +31,7 @@
                     <a href="splash.html"><img src="../fotos/logout.png" class="logout-home"></a>
                 </div>
             </div>
-            <h1 class="project_title">Seja Bem Vindo!</h1>
+            <h1 class="project_title">Seja Bem Vindo(a) <?php  echo $_SESSION["email"]; ?></h1>
         </header>
         <div class="paola">
             <img src="../fotos/new icon.png" class="new_icon"  id="myButton">

@@ -12,7 +12,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $query="INSERT INTO users(nome, phone, email, pass ) VALUES('$nome', '$phone', '$email', '$pass')";
 
     if(mysqli_query($conexao,$query)){
-        echo"Registro inserido com sucesso!";
+        header("Location: ../html/login.html");
+        //echo"Registro inserido com sucesso!";
     } else {
         echo"Erro ao inserir registro: ".mysqli_error($conexao);
     }

@@ -32,7 +32,7 @@ checkBox.addEventListener('click', function(){
 })
 
 
-/* async function enviarDados(){
+async function enviarDados(){
   const listaSelecao = document.getElementById("selecao").children;
       const dadosParaEnviar = [];
 
@@ -42,7 +42,7 @@ checkBox.addEventListener('click', function(){
       
       enviarDadosParaServidor(dadosParaEnviar);
     }
-   */
+
 const formulario = document.querySelector('.form-content');
 
 formulario.addEventListener('submit', async (e) => {
