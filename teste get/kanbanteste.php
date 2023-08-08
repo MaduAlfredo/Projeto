@@ -66,15 +66,15 @@
         <div id="containerDiv" class="project_grid">
             <?php
             // Requisição GET para obter os projetos do banco de dados
-            $url = 'http://seu_servidor/get_projects.php'; // Substitua pelo endereço correto do arquivo get_projects.php
+            $url = 'taskboltdb.co5yba8aprwc.sa-east-1.rds.amazonaws.com'; // Substitua pelo endereço correto do arquivo get_projects.php
             $data = file_get_contents($url);
             $projects = json_decode($data, true);
     
             foreach ($projects as $project) {
                 echo '<div class="project_items">';
-                echo '<a href="kanban.html"><p class="judas">Nome do Projeto: ' . $project["project_name"] . '</p></a>';
-                echo '<a href="kanban.html"><p class="patricia">Descrição do projeto: ' . $project["project_description"] . '</p></a>';
-                echo '<p class="pedrinho">Última alteração: ' . $project["last_update"] . '</p>';
+                echo '<a href="#"><p class="judas">Nome do Projeto: ' . $projects["board_name"] . '</p></a>';
+                echo '<a href="#"><p class="patricia">Descrição do projeto: ' . $projects["board_desc"] . '</p></a>';
+                echo '<p class="pedrinho">Última alteração: ' . $project["last_change"] . '</p>';
                 echo '</div>';
             }
             ?>
