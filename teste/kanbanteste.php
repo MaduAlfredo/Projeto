@@ -65,15 +65,20 @@
         </div>
         <div id="containerDiv" class="project_grid">
             <?php
+            include_once '../php/conexao.php';
+
+            if ($conexao->connect_error) {
+                die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
+            }
             // Requisição GET para obter os projetos do banco de dados
-            $url = 'taskboltdb.co5yba8aprwc.sa-east-1.rds.amazonaws.com'; // Substitua pelo endereço correto do arquivo get_projects.php
+            $url = 'http://taskboltdb.co5yba8aprwc.sa-east-1.rds.amazonaws.com'; // Substitua pelo endereço correto do arquivo get_projects.php
             $data = file_get_contents($url);
             $projects = json_decode($data, true);
     
             foreach ($projects as $project) {
                 echo '<div class="project_items">';
-                echo '<a href="#"><p class="judas">Nome do Projeto: ' . $projects["board_name"] . '</p></a>';
-                echo '<a href="#"><p class="patricia">Descrição do projeto: ' . $projects["board_desc"] . '</p></a>';
+                echo '<a href="#"><p class="judas">Nome do Projeto: ' . $project["board_name"] . '</p></a>';
+                echo '<a href="#"><p class="patricia">Descrição do projeto: ' . $project["board_desc"] . '</p></a>';
                 echo '<p class="pedrinho">Última alteração: ' . $project["last_change"] . '</p>';
                 echo '</div>';
             }
