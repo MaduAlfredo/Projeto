@@ -71,7 +71,7 @@
                 die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
             }
             // Requisição GET para obter os projetos do banco de dados
-            $url = 'http://taskboltdb.co5yba8aprwc.sa-east-1.rds.amazonaws.com'; // Substitua pelo endereço correto do arquivo get_projects.php
+            $url = 'get_projects.php'; // Substitua pelo endereço correto do arquivo get_projects.php
             $data = file_get_contents($url);
             $projects = json_decode($data, true);
     
