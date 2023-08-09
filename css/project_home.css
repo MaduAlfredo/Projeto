@@ -137,8 +137,8 @@
 }
 
 .logout {
-  border: 1px solid red;
-  color: red;
+  border: 1px solid #b90000;
+  color: #b90000;
   border-radius: 10px;
   background-color: transparent;
   padding: .5rem 2rem;
@@ -151,7 +151,7 @@
 }
 
 .logout:hover {
-    background-color: red;
+    background-color: #b90000;
     color: #fff;
     transition: .2s;
 }

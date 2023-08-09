@@ -1,99 +1,165 @@
 @import url(./reset.css);
 
-h3 {
-    color: white;
-    font-size: medium;
-    margin: 22%;
-}
-
-hr{
-    width: 60%;
-}
-
-.sidebar {
-    display: inline-block;
-    width: 10%;
-    height: 100%;
+body{
     background-color: #181537;
-    position: fixed;
+    color: #fff;
 }
 
-.icon-button {
-    width: 30%;
-    height: 6%;
-    border-radius: 50%;
-    font-size: larger;
-    color: white;
-    background-color: #AD37DD;
-    border: none;
-    margin: 5%;
+.infos{
+    text-align: center;
+    width: 85%;
+    height: 100vh;
+    margin-left: 15%;
+    padding-top: 2rem;
 }
 
-.icon_font {
-    margin: 2px 30px 30px 30px;
-    color: white;
-    display: inline-block;
-}
-
-.sidebar_items {
-    color: white;
-    height: 3%;
-    padding: 8%;
-}
-
-.rovena{
-    padding: 0px 25px;
-    justify-content: space-around;
-    display: flex;
-}
-
-.rovena img{
-    padding-top: 3px;
-    width: 22%;
-    height: 22%;
-}
-
-.settings{
-    display: inline-block;
-    width: 90%;
-    min-height: 1100px;
-    height: 100%;
-    margin-left: 10%;
+.project_sidebar {
+    padding: 2rem 0;
+    width: 15%;
+    height: 100vh;
     background-color: #363262;
-}
-
-.icon_photo{
-    width: 40%;
-    margin: 10px 50px;
-    border-radius: 100%;
-}
-
-.settings_top{
-    width: 60%;
-    margin: 30px 50px;
-    justify-content: space-between;
+    position: fixed;
     display: flex;
-    margin-left: 21%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.settings_elements {
-    color: white;
-    margin-top: 2%;
-    font-size: x-large;
-    margin-bottom: 4%;
-    margin-left: 24%;
+.sidebar-cima{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 15vh;
+    gap: 5rem;
+    padding: 0 2rem;
 }
 
-.settings_photo{
-    width: 7%;
-    border-radius: 100%;
+.profile{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.settings_btn {
-    width: 40%;
-    height: 40px;
+.suas-infos, .retornar, .seguranca, .verificacao{
+    color: #fff;
+    font-size: 20px;
+}
+
+.retornar::before{
+    font-family: 'unicons';
+    content: '\eb78';
+    margin-right: .4rem;
+}
+
+.retornar:hover{
+    text-decoration: underline;
+    color: #b0acdb;
+    transition: .3s;
+}
+
+.suas-infos::before{
+    font-family: 'unicons';
+    content: '\ea0d';
+    margin-right: .4rem;
+}
+
+.suas-infos:hover, .seguranca:hover, .verificacao:hover{
+    color: #b0acdb;
+    transition: .3s;
+}
+
+.seguranca::before{
+    font-family: 'unicons';
+    content: '\e855';
+    margin-right: .4rem;
+}
+
+.verificacao::before{
+    font-family: 'unicons';
+    content: '\e852';
+    margin-right: .4rem;
+}
+
+.sidebar-baixo{
+    margin: 0 auto;
+}
+
+.showing-infos{
+    width: 70vw;
+    height: 90vh;
+    margin: 0 auto;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #7874a4;
     border-radius: 10px;
-    border: 5px black;
-    font-size: medium;
-    font-weight: bold;
+}
+
+.infos-cima{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.infos-cima h1{
+    font-size: 30px;
+}
+
+.profile-pic{
+    width: 50px;
+}
+
+.infos-meio{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.user h2, .email h2, .telefone h2{
+    font-size: 25px;
+    margin-bottom: .5rem;
+}
+
+.user p, .email p, .telefone p{
+    color: #b0acdb;
+    font-size: 18px;
+}
+
+.edit-button{
+    background-color: #b0acdb;
+    padding: .5rem 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.edit-button:hover{
+    background-color: #7874a4;
+    transition: .3s;
+}
+  
+.logout {
+    border: 1px solid #b90000;
+    color: #b90000;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: .5rem 2rem;
+}
+  
+.logout::before{
+    font-family: 'unicons';
+    content: '\eaef';
+    margin-right: .5rem;
+}
+  
+.logout:hover {
+    background-color: #b90000;
+    color: #fff;
+    transition: .2s;
 }
