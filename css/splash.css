@@ -15,15 +15,15 @@ body{
 
 .login{
     border-radius:5px;
-    color:#B0ACDB;
+    color:#7168CD;
     font-size: medium;
     background-color: transparent;
-    border: 1px #B0ACDB solid;
+    border: 1px #7168CD solid;
     padding: .5rem 1rem;
 }
 .login:hover{
     border: 1px solid transparent;
     color: #fff;
-    background-color: #B0ACDB;
+    background-color: #7168CD;
     transition: .3s;
 }
