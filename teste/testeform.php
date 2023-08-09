@@ -28,7 +28,7 @@
         </div> -->
 
             <div id="complex" class="complex" class="dropdown-kanban">
-                <select name="complex" class="menuKanban">
+                <select name="complex" class="menu-kanban menu-open-kanban">
                     <option value="alta">Alta</option>
                     <option value="media">Média</option>
                     <option value="baixa">Baixa</option>
