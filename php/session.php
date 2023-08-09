@@ -11,11 +11,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conexao->query($sql);
 
     if ($result->num_rows == 1) {
-        session_start();
-        // Armazena o nome de usuário na sessão
-        $_SESSION["email"] = $email;
-        header("Location: ../teste/testeform.php");
+        $row = $result->fetch_assoc();
+        $id_user = $row["id_user"]; // Obtém o id_user associado ao email
 
+        session_start();
+        // Armazena o email e o id_user na sessão
+        $_SESSION["email"] = $email;
+        $_SESSION["id_user"] = $id_user; // Correção: use a variável $id_user
+
+        header("Location: ../teste/testeform.php");
     } else {
         // Caso contrário, mostre uma mensagem de erro
         echo "Usuário ou senha inválidos.";
@@ -23,4 +27,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conexao->close();
+
 ?>

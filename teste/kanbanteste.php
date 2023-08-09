@@ -68,19 +68,24 @@
             include_once '../php/conexao.php';
 
             if ($conexao->connect_error) {
-                die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
+            die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
             }
+
+            include_once '../php/session.php'; // Certifique-se de que $id_dono é definido neste arquivo
+
             // Requisição GET para obter os projetos do banco de dados
-            $url = 'get_projects.php'; // Substitua pelo endereço correto do arquivo get_projects.php
+            $url = 'get_projects.php';
             $data = file_get_contents($url);
             $projects = json_decode($data, true);
-    
+
+            var_dump($id_user);
+
             foreach ($projects as $project) {
-                echo '<div class="project_items">';
-                echo '<a href="#"><p class="judas">Nome do Projeto: ' . $project["board_name"] . '</p></a>';
-                echo '<a href="#"><p class="patricia">Descrição do projeto: ' . $project["board_desc"] . '</p></a>';
-                echo '<p class="pedrinho">Última alteração: ' . $project["last_change"] . '</p>';
-                echo '</div>';
+            echo '<div class="project_items">';
+            echo '<a href="#"><p class="judas">Nome do Projeto: ' . $project["board_name"] . '</p></a>';
+            echo '<a href="#"><p class="patricia">Descrição do projeto: ' . $project["board_desc"] . '</p></a>';
+            echo '<p class="pedrinho">Última alteração: ' . $project["last_change"] . '</p>';
+            echo '</div>';
             }
             ?>
         </div>
