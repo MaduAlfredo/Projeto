@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start();
         // Armazena o nome de usuário na sessão
         $_SESSION["email"] = $email;
-        header("Location: ../html/kanban.html");
+        header("Location: ../teste/testeform.php");
 
     } else {
         // Caso contrário, mostre uma mensagem de erro

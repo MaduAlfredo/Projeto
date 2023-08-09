@@ -1,31 +1,67 @@
 <?php
-include_once 'conexao.php';
+include_once '../php/conexao.php';
+
+session_start();
+
+if (!isset($_SESSION["email"])) {
+    header("Location: testeform.php");
+    exit();
+}
+
+// Assuming $conexao is the database connection
+
+$email = $_SESSION["email"]; // Make sure to sanitize and validate the email
+
+$query = "SELECT id_user FROM users WHERE email = '$email'";
+$stmt = mysqli_prepare($conexao, $query);
+
+if ($stmt) {
+    mysqli_stmt_execute($stmt);
+    
+    mysqli_stmt_bind_result($stmt, $userId);
+
+    if (mysqli_stmt_fetch($stmt)) {
+        // $userId now holds the fetched value
+        // Use $userId as needed
+    } else {
+        // Handle fetch error
+    }
+
+    mysqli_stmt_close($stmt);
+} else {
+    // Handle statement preparation error
+    echo "Statement Error: " . mysqli_error($conexao);
+}
+$complex = isset($_POST["complex"]) ? $_POST["complex"] : "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $idDono = $_POST["task_title"];
-    $boardName = $_POST["task_desc"];
-    $boardDesc = $_POST["taskType"];
-    $complex = $_POST[""];
+    // Sanitize and validate user inputs
+    $boardName = $_POST["boardName"];
+    $boardDesc = $_POST["boardDesc"];
+    $boardTime = $_POST["boardTime"];
 
-    // Perform a check to ensure the value of $opcao exists in the referenced table (e.g., task_types)
-    $opcaoExistsQuery = "SELECT COUNT(*) as count FROM projects WHERE project_complex = '$complex'";
-    $opcaoExistsResult = mysqli_query($conexao, $opcaoExistsQuery);
-    $opcaoExistsRow = mysqli_fetch_assoc($opcaoExistsResult);
-    $opcaoCount = $opcaoExistsRow['count'];
+    // Assuming $conexao is the database connection
+    $insertQuery = "INSERT INTO projects (id_dono, board_name, board_desc, dates, complex) VALUES (?, ?, ?, ?, ?)";
 
-    if ($opcaoCount > 0) {
-        // If the value of $opcao exists in the referenced table, proceed with the insert query
-        $query = "INSERT INTO tasks(task_name, task_desc, task_type) VALUES('$taskTitle', '$taskDesc', '$opcao')";
+    $stmt = mysqli_prepare($conexao, $insertQuery);
 
-        if (mysqli_query($conexao, $query)) {
+    if ($stmt) {
+        mysqli_stmt_bind_param($stmt, "sssss", $userId, $boardName, $boardDesc, $boardTime, $complex);
+        if (mysqli_stmt_execute($stmt)) {
             echo "Registro inserido com sucesso!";
         } else {
             echo "Erro ao inserir registro: " . mysqli_error($conexao);
         }
+        mysqli_stmt_close($stmt);
     } else {
-        echo "O valor selecionado para taskType não existe na tabela task_types.";
+        echo "Erro na preparação da declaração: " . mysqli_error($conexao);
     }
-
-    mysqli_close($conexao);
+} else {
+    echo "Método de requisição inválido.";
 }
+
+// Close the database connection
+mysqli_close($conexao);
+
+
 ?>
