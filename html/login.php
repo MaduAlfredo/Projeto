@@ -22,7 +22,6 @@
                 <div class="card-front">
                   <div class="center-wrap">
                     <div class="section text-center">
-<<<<<<< Updated upstream:html/login.php
                       <form method="post" action="../php/session.php">
                         <h4 class="mb-4 pb-3">Login</h4>
                         <div class="form-group" >
@@ -36,19 +35,7 @@
                         <button class="btn mt-4" type="submit">Login</button> 
                       </form>
                         <p class="mb-0 mt-4 text-center"><a href="#" class="link">Esqueceu a senha?</a></p>
-=======
-                      <h4 class="mb-4 pb-3">Login</h4>
-                      <div class="form-group">
-                        <input type="email" class="form-style" placeholder="E-mail">
-                        <i class="input-icon uil uil-at"></i>
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="password" class="form-style" placeholder="Senha">
-                        <i class="input-icon uil uil-lock-alt"></i>
-                      </div>
-                      <a href="index.html" class="btn mt-4">Login</a>
-                      <p class="mb-0 mt-4 text-center"><a href="https://www.web-leb.com/code" class="link">Esqueceu a senha?</a></p>
->>>>>>> Stashed changes:html/login.html
+        
                     </div>
                   </div>
                 </div>
@@ -73,14 +60,9 @@
                           <input type="password" class="form-style" placeholder="Senha" name="pass">
                           <i class="input-icon uil uil-lock-alt"></i>
                         </div>
-<<<<<<< Updated upstream:html/login.php
                         <!-- <a href="../html/index.html">
                         </a> -->
                         <button type="submit" class="btn mt-4" name="send">Cadastrar-se</button>
-=======
-                        <a href="index.html"><button type="submit" class="btn mt-4" name="send">Cadastrar-se</button></a>
-                      </form>
->>>>>>> Stashed changes:html/login.html
                     </div>
                   </div>
                 </div>
