@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["email"] = $email;
         $_SESSION["id_user"] = $id_user; // Correção: use a variável $id_user
 
-        header("Location: ../teste/testeform.php");
+        header("Location: ../php/processForm.php");
     } else {
         // Caso contrário, mostre uma mensagem de erro
         echo "Usuário ou senha inválidos.";
