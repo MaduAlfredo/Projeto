@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/modal-kanban.css">
 </head>
 <body>
-<form action="../teste/process.php" method="POST" >
+<form action="processBoard.php" method="POST" >
     <div class="modal-content-kanban">
         <h1 class="modal-title-kanban">Novo Projeto</h1>
         <div class="modal-elements-kanban">

@@ -2,24 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/kanban.css">
-    <link rel="stylesheet" href="../css/modal.css">
-    <title>Home</title>
-</head>
-<body>
-    <section class="project">
-        <header class="project_header">
-            <div class="dropdown">
-            <img src="../fotos/mr.incredible.png" class="dropbtn">
-                <div class="dropdown-content">
-                    <a href="settings.html"><a href="settings.html">Configurações</a></a>
-                    <a href="splash.html"><img src="../fotos/logout.png" class="logout-home"></a>
-                </div><!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taskbolt | Board</title>
     <link rel="stylesheet" href="../css/kanban.css">
@@ -45,57 +27,43 @@
                   <li id="myButton-kanban">+ Criar projeto</li>
                   <li class="active">Projeto 1</li>
                 </ul>
-                <div id="myModal-kanban" class="modal-kanban">
+                <form id="myModal-kanban" class="modal-kanban">
                     <div class="modal-content-kanban">
-                        <span class="close-kanban">&times;</span>
-                        <div>
-                            <h2 class="modal-title-kanban">Novo Board</h2>
+                        <h1 class="modal-title-kanban">Novo Projeto</h1>
                         <div class="modal-elements-kanban">
-                            <h1 class="modal-names-kanban">Nome do Board</h1>
-                            <input type="text-kanban" name="board_name-kanban" class="modal-input-name-kanban">
+                            <h2>Nome do Projeto:</h2>
+                            <input type="text" name="board_name-kanban">
                         </div>
-                        <hr>
                         <div class="modal-elements-kanban">
-                            <h1 class="modal-names-kanban">Descrição do Board</h1>
-                            <textarea name="board_desc-kanban" cols="50" rows="5" class="modal-input-desc-kanban"></textarea>
+                            <h2>Descrição do Projeto:</h2>
+                            <textarea name="board_desc-kanban" cols="50" rows="5"></textarea>
                         </div>
-                        <hr>
                         <div class="modal-elements-kanban">
-                            <h1 class="modal-names-kanban">Expectativa de Conclusão</h1>
-                            <input type="date" name="board_expec-kanban" class="modal-input-expec-kanban">
+                            <h2>Expectativa de Conclusão:</h2>
+                            <input type="date" name="board_expec-kanban" id="modal-date-kanban">
                         </div>
-                        <hr>
                         <div class="modal-elements-kanban">
-                            <h1 class="modal-names-kanban">Complexidade</h1>
-                        <div class="dropdown-kanban">
-                            <div class="select-kanban" >
-                                <span class="selected-kanban">Média</span>
-                                <div class="caret-kanban"></div>
-                            </div>
-                            <ul class="menu-kanban">
-                                <li>Alta</li>
-                                <li class="active-kanban">Média</li>
-                                <li>Baixa</li>
-                            </ul>
-                          </div>
-                          </div>
-                          <button id="criarDiv-kanban" onclick="criarDiv()" class="modal-elements-kanban">Criar</button>
+                            <h2>Complexidade:</h2>
+                        <div id="complex" class="complex">
+                            <select name="complex" class="dropdown-kanban">
+                                <option value="alta">Alta</option>
+                                <option value="media">Média</option>
+                                <option value="baixa">Baixa</option>
+                            </select>
+                        </div>
+                        </div>
+                        <div class="modal-botoes-kanban">
+                            <button class="modal-save">Cancelar</button>
+                            <button class="modal-cancel" type="submit">Criar</button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
         <div class="sidebar-baixo">
-            <button class="logout">
-              <div class="logoutPic">
-                  <img src="../fotos/logout.png" alt="" >
-              </div>
-              <div class="logoutText">
-                <span>Sair</span>
-              </div>
-          </button>
+            <a class="logout">Sair</a>
         </div>
-    </section>
+        </section>
     <section class="board">
         <div class="exibicao">
             <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
@@ -204,60 +172,5 @@
         <script src="../js/kanban/modal-proj.js"></script>
         <script src="../js/kanban/dropdown-kanban.js"></script>
     </section>
-</body>
-</html>
-            </div>
-            <h1 class="project_title">Seja Bem Vindo!</h1>
-        </header>
-        <div class="paola">
-            <img src="../fotos/new icon.png" class="new_icon"  id="myButton">
-
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <!-- <span class="close">&times;</span>
-                    <div>
-                        <h2 class="modal-title">Novo Board</h2>
-                    <div class="modal-elements">
-                        <h1 class="modal-names">Nome do Board</h1>
-                        <input type="text" name="board_name" class="modal-input-name">
-                    </div>
-                    <hr>
-                    <div class="modal-elements">
-                        <h1 class="modal-names">Descrição do Board</h1>
-                        <textarea name="board_desc" cols="50" rows="5" class="modal-input-desc"></textarea>
-                    </div>
-                    <hr>
-                    <div class="modal-elements">
-                        <h1 class="modal-names">Expectativa de Conclusão</h1>
-                        <input type="date" name="board_expec" class="modal-input-expec">
-                    </div>
-                    <hr>
-                    <div class="modal-elements">
-                        <h1 class="modal-names">Complexidade</h1>
-                    <div class="dropdown-home">
-                        <div class="select-home" >
-                            <span class="selected-home">Média</span>
-                            <div class="caret-home"></div>
-                        </div>
-                        <ul class="menu-home">
-                            <li>Alta</li>
-                            <li class="active-home">Média</li>
-                            <li>Baixa</li>
-                        </ul>
-                      </div>
-                      </div> -->
-                      <button id="criarDiv" onclick="criarDiv()" class="modal-elements">Criar</button>
-                    </div>
-                </div>
-
-                <div></div>
-            </div>
-              <h1 class="title2-home">Seus Boards</h1>
-        </div>
-        
-    </section>
-<script src="../js/project_funcions.js"></script>
-<script src="../js/modal.js"></script>
-<script src="../js/dropdownhome.js"></script>
 </body>
 </html>
