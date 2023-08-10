@@ -1,0 +1,50 @@
+.modal-content-kanban{
+    text-align: center;
+    height:720px;
+    margin-top:6%;
+}
+
+.modal-elements-kanban input{
+     width:600px;
+     height:25px;
+     text-align: center;
+}
+
+.modal-elements-kanban textarea{
+    width:600px;
+    height:130px;
+}
+
+.modal-elements-kanban .expec{
+    width:600px;
+    text-align: center;
+    font-size: medium;
+}
+
+#complex select{
+    width:615px;
+    height:40px;
+    border-radius:8px;
+    margin-top:1%;
+    text-align: center;
+}
+#complex h2{
+    font-size:larger;
+}
+
+.modal-cancel,.modal-save{
+     width:230px;
+     margin-left:37%;
+     background-color: transparent;
+     border:1px white solid;
+     color:white;
+     height:130px;
+     border-radius:5px;
+}
+.modal-cancel:hover,.modal-save:hover{
+    background-color: #491199;
+    border:none;
+    transition: .3s;
+}
+
+
