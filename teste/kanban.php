@@ -27,7 +27,7 @@
                   <li id="myButton-kanban">+ Criar projeto</li>
                   <li class="active">Projeto 1</li>
                 </ul>
-                <form action="processBoard.php" method="POST" >
+                <form id="myModal-kanban" class="modal-kanban" action="../php/processBoard.php" method="POST" >
     <div class="modal-content-kanban">
         <h1 class="modal-title-kanban">Novo Projeto</h1>
         <div class="modal-elements-kanban">
