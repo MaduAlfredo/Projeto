@@ -3,9 +3,40 @@ include_once '../php/conexao.php';
 // Inicia a sessão no início do script
 session_start();
 
-$id_board = null; // Inicialize a variável id_board
+$_SESSION["id_user"] = $id_user;
 
-if (isset($_SESSION["email"])) {
+$id_dono=$id_user;
+
+$teste = "SELECT * FROM projects WHERE id_dono = '$id_dono'";
+
+
+$result = mysqli_query($conexao, $teste);
+
+if ($result) {
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $id_board = $row["id_board"];
+            $boardName = $row["board_name"];
+            $boardDesc = $row["board_desc"];
+            $boardTime = $row["dates"];
+            echo "Nome do Board: " . $boardName . "<br>";
+            echo "Descrição do Board: " . $boardDesc . "<br>";
+            echo "Data do Board: " . $boardTime . "<br>";
+        }
+        mysqli_free_result($result);
+    } else {
+        echo "Nenhum resultado encontrado.";
+    }
+} else {
+    echo "Erro na consulta: " . mysqli_error($conexao);
+}
+//var_dump($teste);
+
+
+
+
+/*if (isset($_SESSION["email"])) {
+    $id_board = null; // Inicialize a variável id_board
     $email = $_SESSION["email"];
 
     if($email=="maria@gmail.com"){
@@ -17,7 +48,7 @@ if (isset($_SESSION["email"])) {
     elseif($email == "teste@gmail.com"){
         $id_board=1;
     }
-}
+}*/
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitize and validate user inputs
@@ -48,6 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Método de requisição inválido.";
 }
+
 
 // Close the database connection
 mysqli_close($conexao);
