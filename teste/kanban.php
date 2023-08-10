@@ -41,7 +41,8 @@
                   }
                 // Loop através dos resultados do banco de dados e exibir nomes de boards como itens de lista
                 while ($row = $result->fetch_assoc()) {
-                    echo '<li><a href="kanban.php?id=' . $row["id_board"] . '">' . $row["board_name"] . '</a></li>';
+                    echo '<li><a href="../kanban.php?id=' . $row["id_board"] . '">' . $row["board_name"] . '</a></li>';
+                    echo $row["id_board"];
                 }
                 ?>
                 </ul>

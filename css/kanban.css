@@ -98,7 +98,7 @@ body{
 
 .descricao{
   margin: .5rem 0;
-  height: 30px;
+  min-height: 50px;
   overflow: hidden;
   background-color: #181537;
   border-radius: 5px;
