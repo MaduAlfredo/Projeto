@@ -26,7 +26,24 @@
                 </div>
                 <ul class="menu">
                   <li id="myButton-kanban">+ Criar projeto</li>
-                  <li class="active">Projeto 1</li>
+                  <?php
+                  include_once '../php/conexao.php';
+
+                  if ($conexao->connect_error) {
+                      die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
+                  }
+                  
+                  $sql = "SELECT * FROM projects";
+                  $result = $conexao->query($sql);
+                  
+                  if (!$result) {
+                      die("Erro na consulta SQL: " . $conexao->error);
+                  }
+                // Loop através dos resultados do banco de dados e exibir nomes de boards como itens de lista
+                while ($row = $result->fetch_assoc()) {
+                    echo '<li><a href="kanban.php?id=' . $row["id_board"] . '">' . $row["board_name"] . '</a></li>';
+                }
+                ?>
                 </ul>
                 <form id="myModal-kanban" class="modal-kanban" action="../php/processBoard.php" method="POST" >
     <div class="modal-content-kanban">
@@ -74,33 +91,49 @@
         <div class="real-kanban cards">
             <div class="type-card status" id="backlog" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>Backlog</span>
-                <div class="content card" id="task1" draggable="true" ondragstart="drag(event)">
-                    <div class="cima">
-                        <div class="titulo">
-                            <h3>inserindo bastante texto pra testar o card</h3>
-                        </div>
-                        <div class="descricao descricao-card">
-                            <p>uau aqui estou super descrevendo o card hahahaha</p>
-                        </div>
-                    </div>
-                    <div class="dificuldade"></div>
-                </div>
+                <?php
+                // Conecte-se ao banco de dados
+                include_once '../php/conexao.php';
+
+                if ($conexao->connect_error) {
+                    die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
+                }
+                
+                // Obtém o ID do board a partir do parâmetro da URL (caso necessário)
+                $board_id = isset($_GET['id']) ? $_GET['id'] : null;
+
+                // Consulta as tarefas da tabela "tasks" associadas ao board_id (substitua "id_board" pelo nome correto da coluna)
+                $sql_tasks = "SELECT * FROM tasks WHERE id_board = '$board_id'";
+                $result_tasks = $conexao->query($sql_tasks);
+                
+                if ($result_tasks->num_rows > 0) {
+                    // Loop através das tarefas e exibir dentro da div "backlog"
+                    while ($row_task = $result_tasks->fetch_assoc()) {
+                        echo '<div class="content card" id="task' . $row_task["id_task"] . '" draggable="true" ondragstart="drag(event)">';
+                        echo '<div class="cima">';
+                        echo '<div class="titulo">';
+                        // Verifique se a chave "task_name" existe antes de acessar
+                        if (isset($row_task["task_name"])) {
+                            echo '<h3>' . $row_task["task_name"] . '</h3>';
+                        }
+                        echo '</div>';
+                        echo '<div class="descricao descricao-card">';
+                        // Verifique se a chave "task_description" existe antes de acessar
+                        if (isset($row_task["task_description"])) {
+                            echo '<p>' . $row_task["task_description"] . '</p>';
+                        }
+                        echo '</div>';
+                        echo '</div>';
+                        // ... (resto do conteúdo do card)
+                        echo '</div>';
+                    }
+                } else {
+                    echo '<p>Nenhuma tarefa encontrada.</p>';
+                }
+                ?>
             </div>
             <div class="type-card status" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>To do</span>
-                <div class="content card" id="task2" draggable="true" ondragstart="drag(event)">
-                    <div class="cima">
-                        <div class="titulo">
-                            <h3>esse é o título do card, hahahaha</h3>
-                        </div>
-                        <div class="descricao descricao-card">
-                            <p>descricao numero 2 eitarrrr vou me matar aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                        </div>
-                    </div>
-                    <div class="baixo">
-                        <div class="dificuldade"></div>
-                    </div>
-                </div>
             </div>
             <div class="type-card status" id="inprogress" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>In progress</span>
@@ -110,13 +143,6 @@
             </div>
             <div class="type-card status" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
                 <span>Done</span>
-            </div>
-        </div>
-        <div class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h1>esse é o título do modal que eu abri hein hehe</h1>
-                <p>descrição muito foda</p>
             </div>
         </div>
         <div class="add-modal">
