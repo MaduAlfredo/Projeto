@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/kanban.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
     <link rel="stylesheet" href="../css/modal-kanban.css">
+    <link rel="stylesheet" href="../css/kanbanphp.css">
 </head>
 <body>
     <section class="project_sidebar">
@@ -40,7 +41,7 @@
         </div>
         <div class="modal-elements-kanban">
             <h2>Expectativa de Conclusão:</h2>
-            <input type="date" name="boardTime" id="">
+            <input type="date" name="boardTime" id="" class="expec">
         </div>
         <!-- <div class="dropdown-kanban">
         </div> -->
