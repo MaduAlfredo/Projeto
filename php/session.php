@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Armazena o email e o id_user na sessão
         $_SESSION["email"] = $email;
         $_SESSION["id_user"] = $id_user; // Correção: use a variável $id_user
+        
 
         header("Location: ../php/processForm.php");
     } else {

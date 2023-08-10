@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_stmt_bind_param($stmt, "sssss", $userId, $boardName, $boardDesc, $boardTime, $complex);
         if (mysqli_stmt_execute($stmt)) {
             //echo "Registro inserido com sucesso!";
-            header("Location: ../teste/kanban.php");
+            header("Location: ../teste/kanba.php");
         } else {
             echo "Erro ao inserir registro: " . mysqli_error($conexao);
         }
