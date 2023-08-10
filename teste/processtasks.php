@@ -4,6 +4,7 @@ include_once '../php/conexao.php';
 session_start();
 
 $_SESSION["id_user"] = $id_user;
+$_SESSION["id_board"] = $id_board;
 
 $id_dono=$id_user;
 
