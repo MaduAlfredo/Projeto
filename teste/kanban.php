@@ -47,34 +47,31 @@
                 ?>
                 </ul>
                 <form id="myModal-kanban" class="modal-kanban" action="../php/processBoard.php" method="POST" >
-    <div class="modal-content-kanban">
-        <h1 class="modal-title-kanban">Novo Projeto</h1>
-        <div class="modal-elements-kanban">
-            <h2>Nome do Projeto</h2>
-            <input type="text" name="boardName" placeholder="Título do Board">
-        </div>
-        <div class="modal-elements-kanban">
-            <h2>Descrição do Projeto:</h2>
-            <textarea name="boardDesc" id="" cols="30" rows="10"></textarea>
-        </div>
-        <div class="modal-elements-kanban">
-            <h2>Expectativa de Conclusão:</h2>
-            <input type="date" name="boardTime" id="" class="expec">
-        </div>
-        <!-- <div class="dropdown-kanban">
-        </div> -->
-
-            <div id="complex" class="complex" class="dropdown-kanban">
-                <select name="complex" class="menu-kanban menu-open-kanban">
-                    <option value="alta">Alta</option>
-                    <option value="media">Média</option>
-                    <option value="baixa">Baixa</option>
-                </select>
-            </div>
-        <button class="modal-save">Cancelar</button>
-        <input class="modal-cancel" type="submit" value="Criar">
-    </div>
-</form>
+                    <div class="modal-content-kanban">
+                        <h1 class="modal-title-kanban">Novo Projeto</h1>
+                        <div class="modal-elements-kanban">
+                            <h2>Nome do Projeto</h2>
+                            <input type="text" name="boardName" placeholder="Título do Board">
+                        </div>
+                        <div class="modal-elements-kanban">
+                            <h2>Descrição do Projeto:</h2>
+                            <textarea name="boardDesc" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="modal-elements-kanban">
+                            <h2>Expectativa de Conclusão:</h2>
+                            <input type="date" name="boardTime" id="" class="expec">
+                        </div>
+                        <div id="complex" class="complex" class="dropdown-kanban">
+                            <select name="complex" class="menu-kanban menu-open-kanban">
+                                <option value="alta">Alta</option>
+                                <option value="media">Média</option>
+                                <option value="baixa">Baixa</option>
+                            </select>
+                        </div>
+                        <button class="modal-save">Cancelar</button>
+                        <input class="modal-cancel" type="submit" value="Criar">
+                    </div>
+                </form>
             </div>
         </div>
         <div class="sidebar-baixo">

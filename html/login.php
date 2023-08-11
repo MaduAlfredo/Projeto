@@ -60,8 +60,6 @@
                           <input type="password" class="form-style" placeholder="Senha" name="pass">
                           <i class="input-icon uil uil-lock-alt"></i>
                         </div>
-                        <!-- <a href="../html/index.html">
-                        </a> -->
                         <button type="submit" class="btn mt-4" name="send">Cadastrar-se</button>
                     </div>
                   </div>
