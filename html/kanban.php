@@ -187,7 +187,7 @@
                         </div>
                     </div>
                     <div class="add-botoes">
-                        <button class="add-cancel">Cancelar</button>
+                        <button class="add-cancel modal-save">Cancelar</button>
                         <button type="submit" class="add-save" onclick="enviarDados()">Salvar</button>
                     </div>
                 </form>
