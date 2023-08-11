@@ -41,16 +41,17 @@ $result = mysqli_query($conexao, $teste);
 if ($result) {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-            $id_board = $row["id_board"];
-            /*$boardName = $row["board_name"];
+           /* $id_board = $row["id_board"];
+            $boardName = $row["board_name"];
             $boardDesc = $row["board_desc"];
             $boardTime = $row["dates"];
             echo "Nome do Board: " . $boardName . "<br>";
             echo "Data do Board: " . $boardTime . "<br>";
             echo "Descrição do Board: " . $boardDesc . "<br>";
-            */
+            
             echo"Id do board=" . $id_board . "<br>";
-            var_dump($id_dono);
+            var_dump($id_dono);*/
+            //header("Location: ../html/kanban.php");
         }
         mysqli_free_result($result);
     } else {

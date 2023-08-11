@@ -29,7 +29,6 @@
                     ?>
                     <span>Abrir configurações</span>
                 </button>
-                <img src="../fotos/user_icon.png" width="45px" alt="">
             </div>
             <div class="dropdown">
                 <div class="select">
@@ -103,7 +102,7 @@
             <label for="reg-log"></label>
         </div>
         <div class="add-atv">
-            <button href="#" class="add-botao">+ Adicionar</button>
+            <button class="add-botao">+ Adicionar</button>
         </div>
         <div class="real-kanban cards">
             <div class="type-card status" id="backlog" ondrop="drop(event)" ondragover="allowDrop(event)">

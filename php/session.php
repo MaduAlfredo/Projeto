@@ -23,7 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../html/kanban.php");
     } else {
         // Caso contrário, mostre uma mensagem de erro
-        echo "Usuário ou senha inválidos.";
+        
+        header("Location: ../html/login.php");
     }
 }
 
