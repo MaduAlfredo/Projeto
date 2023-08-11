@@ -53,6 +53,10 @@
 
 .prio-type{
     display: flex;
-    padding: 0.5em 1em;
+    padding: 0.2em 2em;
     justify-content: space-around;
+}
+.ball{
+    border-radius: 100%;
+    width: 1.5em;
 }

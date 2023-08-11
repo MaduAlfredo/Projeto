@@ -134,7 +134,7 @@
                         }
                         echo '</div>';
                         echo '<div class="descricao descricao-card">';
-                        // Verifique se a chave "task_description" existe antes de acessar
+                        // Verifique se a chave "task_desc" existe antes de acessar
                         if (isset($row_task["task_desc"])) {
                             echo '<div class="desc">';
                             echo '<p>' . $row_task["task_desc"] . '</p>';
@@ -143,10 +143,30 @@
                         echo '</div>';
                         echo '<div class="prio-type">';
                         echo '<div class="prio-type">';
-                        echo '<p>'. $row_task["priority"] .'</p>';
+                        
+                        // Verifique o valor da prioridade e exiba uma imagem correspondente
+                        if ($row_task["priority"] == "alta") {
+                            echo '<img src="../fotos/azul.png" alt="Prioridade Alta" class="ball">';
+                        } elseif ($row_task["priority"] == "media") {
+                            echo '<img src="../fotos/ciano.png" alt="Prioridade Média" class="ball">';
+                        } elseif ($row_task["priority"] == "baixa") {
+                            echo '<img src="../fotos/verde.png" alt="Prioridade Baixa" class="ball">';
+                        } 
+                        
                         echo '</div>';
                         echo '<div class="prio-type">';
-                        echo '<p>'. $row_task["task_type"] . '</p>';
+                        
+                        // Verifique o valor do tipo de tarefa e exiba uma imagem correspondente
+                        if ($row_task["task_type"] == "tipo1") {
+                            echo '<img src="../fotos/imagem_tipo1.png" alt="Tipo 1" class="tipo-image">';
+                        } elseif ($row_task["task_type"] == "tipo2") {
+                            echo '<img src="../fotos/imagem_tipo2.png" alt="Tipo 2" class="tipo-image">';
+                        } elseif ($row_task["task_type"] == "tipo3") {
+                            echo '<img src="../fotos/imagem_tipo3.png" alt="Tipo 3" class="tipo-image">';
+                        } elseif ($row_task["task_type"] == "tipo3") {
+                            echo '<img src="../fotos/imagem_tipo3.png" alt="Tipo 3" class="tipo-image">';
+                        } 
+                        
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
