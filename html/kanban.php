@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../css/modal-kanban.css">
     <link rel="stylesheet" href="../css/kanbanphp.css">
 </head>
+
 <body>
     <section class="project_sidebar">
         <div class="sidebar-cima">
@@ -21,30 +23,32 @@
             </div>
             <div class="dropdown">
                 <div class="select">
-                  <span class="selected">Projeto 1</span>
-                  <div class="caret"></div>
+                    <span class="selected">Seus Boards</span>
+                    <div class="caret"></div>
                 </div>
                 <ul class="menu">
-                  <li id="myButton-kanban">+ Criar projeto</li>
-                  <?php
-                  include_once '../php/conexao.php';
+                    <li id="myButton-kanban">+ Criar Board</li>
+                    <?php
+                    include_once '../php/conexao.php';
 
-                  if ($conexao->connect_error) {
-                      die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
-                  }
-                  
-                  $sql = "SELECT * FROM projects";
-                  $result = $conexao->query($sql);
-                  
-                  if (!$result) {
-                      die("Erro na consulta SQL: " . $conexao->error);
-                  }
-                // Loop através dos resultados do banco de dados e exibir nomes de boards como itens de lista
-                while ($row = $result->fetch_assoc()) {
-                    echo '<li><a href="../kanban.php?id=' . $row["id_board"] . '">' . $row["board_name"] . '</a></li>';
-                    echo $row["id_board"];
-                }
-                ?>
+                    if ($conexao->connect_error) {
+                        die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
+                    }
+
+                    include_once '../php/userId.php';
+
+                    // Consulta somente os boards do usuário específico
+                    $sql = "SELECT * FROM projects WHERE id_dono = '$userId'";
+                    $result = $conexao->query($sql);
+
+                    if (!$result) {
+                        die("Erro na consulta SQL: " . $conexao->error);
+                    }
+                    // Loop através dos resultados do banco de dados e exibir nomes de boards como itens de lista
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<li><a href="kanban.php?id=' . $row["id_board"] . '">' . $row["board_name"] . '</a></li>';
+                    }
+                    ?>
                 </ul>
                 <form method="POST" action="../php/processBoard.php" id="myModal-kanban" class="modal-kanban">
                     <div class="modal-content-kanban">
@@ -63,13 +67,13 @@
                         </div>
                         <div class="modal-elements-kanban">
                             <h2>Complexidade:</h2>
-                        <div id="complex" class="complex">
-                            <select name="complex" class="dropdown-kanban">
-                                <option value="alta">Alta</option>
-                                <option value="media">Média</option>
-                                <option value="baixa">Baixa</option>
-                            </select>
-                        </div>
+                            <div id="complex" class="complex">
+                                <select name="complex" class="dropdown-kanban">
+                                    <option value="alta">Alta</option>
+                                    <option value="media">Média</option>
+                                    <option value="baixa">Baixa</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="modal-botoes-kanban">
                             <button class="modal-save">Cancelar</button>
@@ -82,7 +86,7 @@
         <div class="sidebar-baixo">
             <a class="logout">Sair</a>
         </div>
-        </section>
+    </section>
     <section class="board">
         <div class="exibicao">
             <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
@@ -101,14 +105,14 @@
                 if ($conexao->connect_error) {
                     die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
                 }
-                
+
                 // Obtém o ID do board a partir do parâmetro da URL (caso necessário)
                 $board_id = isset($_GET['id']) ? $_GET['id'] : null;
 
                 // Consulta as tarefas da tabela "tasks" associadas ao board_id (substitua "id_board" pelo nome correto da coluna)
                 $sql_tasks = "SELECT * FROM tasks WHERE id_board = '$board_id'";
                 $result_tasks = $conexao->query($sql_tasks);
-                
+
                 if ($result_tasks->num_rows > 0) {
                     // Loop através das tarefas e exibir dentro da div "backlog"
                     while ($row_task = $result_tasks->fetch_assoc()) {
@@ -201,4 +205,5 @@
         <script src="../js/kanban/dropdown-kanban.js"></script>
     </section>
 </body>
+
 </html>
