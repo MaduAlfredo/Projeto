@@ -26,23 +26,23 @@ if ($stmt) {
     echo "Statement Error: " . mysqli_error($conexao);
 }
 
-var_dump($userId);
+//var_dump($userId);
 
 $_SESSION["userId"] = $userId;
-$_SESSION["id_board"] = $id_board;
+//$_SESSION["board_id"] = $id_board;
 
 $id_dono=$userId;
 
 $teste = "SELECT * FROM projects WHERE id_dono = '$id_dono'";
 
-
 $result = mysqli_query($conexao, $teste);
+var_dump($id_dono);
 
 if ($result) {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
-           /* $id_board = $row["id_board"];
-            $boardName = $row["board_name"];
+            $id_board = $row["id_board"];
+            /*$boardName = $row["board_name"];
             $boardDesc = $row["board_desc"];
             $boardTime = $row["dates"];
             echo "Nome do Board: " . $boardName . "<br>";
@@ -62,7 +62,6 @@ if ($result) {
 }
 
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitize and validate user inputs
     $taskTitle = $_POST["task_title"];
@@ -74,6 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Assuming $conexao is the database connection
     $insertQuery = "INSERT INTO tasks (id_board, task_name, task_desc, dates, priority, task_type) VALUES (?, ?, ?, ?, ?, ?)";
 
+
     $stmt = mysqli_prepare($conexao, $insertQuery);
 
     if ($stmt) {
@@ -81,8 +81,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (mysqli_stmt_execute($stmt)) {
             echo "Registro inserido com sucesso!";
             //header("Location: ../teste/kanbanteste.php");
+            header("Location:../html/kanban.php");
         } else {
-            echo "Erro ao inserir registro: " . mysqli_error($conexao);
+            //$id_board = 71;
+            // Comentado o trecho de echo que causava o erro
+            // echo"feldkiubgszldujfh";
         }
         mysqli_stmt_close($stmt);
     } else {

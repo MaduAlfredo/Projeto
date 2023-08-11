@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function() {
+
 var checkBox = document.getElementById("reg-log");
 
 checkBox.addEventListener('click', function(){
@@ -43,36 +45,33 @@ async function enviarDados(){
       enviarDadosParaServidor(dadosParaEnviar);
     }
 
-const formulario = document.querySelector('.form-content');
+    const formulario = document.querySelector('.form-content');
 
-formulario.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const dadosForm = new FormData(formulario);
-  dadosForm.append('dados', e.join(', '));
-
-  const data = await fetch('../../php/processtasks.php', {
-    method: 'POST',
-    body: dadosForm
-  })
-
-  const res = await data.json();
-})
-/* async function enviarDadosParaServidor(dados) {
-      // Cria um objeto FormData para enviar os dados do formulário
-  const formData = new FormData();
-  formData.append('dados', dados.join(', ')); // Junte os dados em uma única string
-
-  const data =  await fetch('../../php/processtasks.php', {
-    method: 'POST',
-    body: formData
-  });
-
-    const res = await data.json();
-} */
+    formulario.addEventListener('submit', async (e) => {
+      e.preventDefault();
+    
+      const dadosForm = new FormData(formulario);
+    
+      // Extrair os dados do FormData e preparar para enviar
+      const dadosParaEnviar = {};
+      for (const [key, value] of dadosForm.entries()) {
+        dadosParaEnviar[key] = value;
+      }
+    
+      const data = await fetch('../../php/processtasks.php', {
+        method: 'POST',
+        body: JSON.stringify(dadosParaEnviar), // Enviar como JSON
+        headers: {
+          'Content-Type': 'application/json' // Indicar que o conteúdo é JSON
+        }
+      });
+    
+      const res = await data.json();
+      }
+    );
 
 const botao = document.querySelector('.profile-left');
 
 botao.onclick = () => {
   location = './settings.html';
-}
+}});

@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/kanban.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
-    <link rel="stylesheet" href="../css/modal-kanban.css">
-    <link rel="stylesheet" href="../css/kanbanphp.css">
+    
 </head>
 <body>
 <div class="add-modal">
@@ -40,7 +37,7 @@
                 
             </div>
             <div class="modal-botoes-kanban">
-                <button class="modal-save">Cancelar</button>
+                <button class="modal-save close-kanban">Cancelar</button>
                 <button class="modal-cancel" type="submit">Criar</button>
             </div>
         </form>
