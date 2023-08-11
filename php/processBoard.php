@@ -36,9 +36,9 @@ $complex = isset($_POST["complex"]) ? $_POST["complex"] : "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sanitize and validate user inputs
-    $boardName = $_POST["boardName"];
-    $boardDesc = $_POST["boardDesc"];
-    $boardTime = $_POST["boardTime"];
+    $boardName = $_POST["board_name-kanban"];
+    $boardDesc = $_POST["board_desc-kanban"];
+    $boardTime = $_POST["board_expec-kanban"];
 
     // Assuming $conexao is the database connection
     $insertQuery = "INSERT INTO projects (id_dono, board_name, board_desc, dates, complex) VALUES (?, ?, ?, ?, ?)";
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_stmt_bind_param($stmt, "sssss", $userId, $boardName, $boardDesc, $boardTime, $complex);
         if (mysqli_stmt_execute($stmt)) {
             //echo "Registro inserido com sucesso!";
-            header("Location: ../teste/kanba.php");
+            //header("Location: ../teste/kanba.php");
         } else {
             echo "Erro ao inserir registro: " . mysqli_error($conexao);
         }
