@@ -3,10 +3,35 @@ include_once '../php/conexao.php';
 // Inicia a sessão no início do script
 session_start();
 
-$_SESSION["id_user"] = $id_user;
+$email = $_SESSION["email"]; // Make sure to sanitize and validate the email
+
+$query = "SELECT id_user FROM users WHERE email = '$email'";
+$stmt = mysqli_prepare($conexao, $query);
+
+if ($stmt) {
+    mysqli_stmt_execute($stmt);
+    
+    mysqli_stmt_bind_result($stmt, $userId);
+
+    if (mysqli_stmt_fetch($stmt)) {
+        // $userId now holds the fetched value
+        // Use $userId as needed
+    } else {
+        // Handle fetch error
+    }
+
+    mysqli_stmt_close($stmt);
+} else {
+    // Handle statement preparation error
+    echo "Statement Error: " . mysqli_error($conexao);
+}
+
+var_dump($userId);
+
+$_SESSION["userId"] = $userId;
 $_SESSION["id_board"] = $id_board;
 
-$id_dono=$id_user;
+$id_dono=$userId;
 
 $teste = "SELECT * FROM projects WHERE id_dono = '$id_dono'";
 
@@ -17,12 +42,15 @@ if ($result) {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id_board = $row["id_board"];
-            $boardName = $row["board_name"];
+            /*$boardName = $row["board_name"];
             $boardDesc = $row["board_desc"];
             $boardTime = $row["dates"];
             echo "Nome do Board: " . $boardName . "<br>";
-            echo "Descrição do Board: " . $boardDesc . "<br>";
             echo "Data do Board: " . $boardTime . "<br>";
+            echo "Descrição do Board: " . $boardDesc . "<br>";
+            */
+            echo"Id do board=" . $id_board . "<br>";
+            var_dump($id_dono);
         }
         mysqli_free_result($result);
     } else {
@@ -41,8 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $taskTime = $_POST["task_time"];
     $priority = isset($_POST["priority"]) ? $_POST["priority"] : "";
     $task_type = isset($_POST["task_type"]) ? $_POST["task_type"] : "";
-    // $id_board = 2;
-
+                  
     // Assuming $conexao is the database connection
     $insertQuery = "INSERT INTO tasks (id_board, task_name, task_desc, dates, priority, task_type) VALUES (?, ?, ?, ?, ?, ?)";
 

@@ -33,12 +33,12 @@
 }
 
 .modal-cancel,.modal-save{
-     width:230px;
+     width:150px;
+     height:55px;
      margin-left:37%;
      background-color: transparent;
      border:1px white solid;
      color:white;
-     height:130px;
      border-radius:5px;
 }
 .modal-cancel:hover,.modal-save:hover{

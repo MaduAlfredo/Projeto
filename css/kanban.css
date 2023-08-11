@@ -197,16 +197,15 @@ display: none;
 
 .modal-content{
   background-color: #b0acdb;
-  height: 60vh;
+  height: 65vh;
   border-radius: 10px;
 }
 
 .add-content {
   background-color: #b0acdb;
-  height: 60vh;
   border-radius: 10px;
   margin: 10% auto;
-  padding: 20px;
+  padding:35px 20px;
   width: 60%;
 }
 
@@ -243,6 +242,7 @@ display: none;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  margin-bottom:45px ;
 }
 
 #descricaoTask{
