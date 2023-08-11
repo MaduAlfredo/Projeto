@@ -135,12 +135,21 @@
                         echo '</div>';
                         echo '<div class="descricao descricao-card">';
                         // Verifique se a chave "task_description" existe antes de acessar
-                        if (isset($row_task["task_description"])) {
-                            echo '<p>' . $row_task["task_description"] . '</p>';
+                        if (isset($row_task["task_desc"])) {
+                            echo '<div class="desc">';
+                            echo '<p>' . $row_task["task_desc"] . '</p>';
+                            echo '</div>';
                         }
                         echo '</div>';
+                        echo '<div class="prio-type">';
+                        echo '<div class="prio-type">';
+                        echo '<p>'. $row_task["priority"] .'</p>';
                         echo '</div>';
-                        // ... (resto do conteúdo do card)
+                        echo '<div class="prio-type">';
+                        echo '<p>'. $row_task["task_type"] . '</p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
                         echo '</div>';
                     }
                 } else {
