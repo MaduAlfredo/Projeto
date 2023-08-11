@@ -15,7 +15,7 @@
     <section class="project_sidebar">
         <div class="sidebar-cima">
             <div class="profile">
-                <button class="profile-left">        
+                <button onclick="document.location='settings.html'" class="profile-left">        
                 <?php
                     include_once '../php/conexao.php';
 
@@ -27,7 +27,7 @@
 
                     echo '<p>'. $userName. '</p>'
                     ?>
-                    <span>Abrir configurações</span>
+                   <span>Abrir configurações</span>
                 </button>
             </div>
             <div class="dropdown">
@@ -157,14 +157,14 @@
                         echo '<div class="prio-type">';
                         
                         // Verifique o valor do tipo de tarefa e exiba uma imagem correspondente
-                        if ($row_task["task_type"] == "tipo1") {
-                            echo '<img src="../fotos/imagem_tipo1.png" alt="Tipo 1" class="tipo-image">';
-                        } elseif ($row_task["task_type"] == "tipo2") {
-                            echo '<img src="../fotos/imagem_tipo2.png" alt="Tipo 2" class="tipo-image">';
-                        } elseif ($row_task["task_type"] == "tipo3") {
-                            echo '<img src="../fotos/imagem_tipo3.png" alt="Tipo 3" class="tipo-image">';
-                        } elseif ($row_task["task_type"] == "tipo3") {
-                            echo '<img src="../fotos/imagem_tipo3.png" alt="Tipo 3" class="tipo-image">';
+                        if ($row_task["task_type"] == "bug") {
+                            echo '<img src="../fotos/bug.png" alt="Bug" class="tipo-image">';
+                        } elseif ($row_task["task_type"] == "story") {
+                            echo '<img src="../fotos/story.png" alt="Story" class="tipo-image">';
+                        } elseif ($row_task["task_type"] == "task") {
+                            echo '<img src="../fotos/task.png" alt="Task" class="tipo-image">';
+                        } elseif ($row_task["task_type"] == "spike") {
+                            echo '<img src="../fotos/spike.png" alt="Spike" class="tipo-image">';
                         } 
                         
                         echo '</div>';
