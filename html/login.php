@@ -35,7 +35,6 @@
                         <button class="btn mt-4" type="submit">Login</button> 
                       </form>
                         <p class="mb-0 mt-4 text-center"><a href="#" class="link">Esqueceu a senha?</a></p>
-        
                     </div>
                   </div>
                 </div>

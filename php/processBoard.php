@@ -4,7 +4,6 @@ include_once '../php/conexao.php';
 session_start();
 
 if (!isset($_SESSION["email"])) {
-    header("Location: testeform.php");
     exit();
 }
 
@@ -49,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         mysqli_stmt_bind_param($stmt, "sssss", $userId, $boardName, $boardDesc, $boardTime, $complex);
         if (mysqli_stmt_execute($stmt)) {
             //echo "Registro inserido com sucesso!";
-            //header("Location: ../teste/kanba.php");
+            header("Location: ../teste/kanban.php");
         } else {
             echo "Erro ao inserir registro: " . mysqli_error($conexao);
         }

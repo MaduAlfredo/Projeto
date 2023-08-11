@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["id_user"] = $id_user; // Correção: use a variável $id_user
         
 
-        header("Location: ../html/kanban.html");
+        header("Location: ../html/kanban.php");
     } else {
         // Caso contrário, mostre uma mensagem de erro
         echo "Usuário ou senha inválidos.";
