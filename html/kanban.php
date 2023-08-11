@@ -15,8 +15,18 @@
     <section class="project_sidebar">
         <div class="sidebar-cima">
             <div class="profile">
-                <button class="profile-left">
-                    <p>valorant da silva</p>
+                <button class="profile-left">        
+                <?php
+                    include_once '../php/conexao.php';
+
+                    if ($conexao->connect_error) {
+                        die("Erro na conexão com o banco de dados: " . $conexao->connect_error);
+                    }
+
+                    include_once '../php/userName.php';
+
+                    echo '<p>'. $userName. '</p>'
+                    ?>
                     <span>Abrir configurações</span>
                 </button>
                 <img src="../fotos/user_icon.png" width="45px" alt="">
