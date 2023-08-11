@@ -47,4 +47,12 @@
     transition: .3s;
 }
 
+.desc{
+    padding: 0.5em 1em;
+}
 
+.prio-type{
+    display: flex;
+    padding: 0.5em 1em;
+    justify-content: space-around;
+}
