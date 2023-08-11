@@ -121,49 +121,40 @@
             </div>
         </div>
         <div class="add-modal">
-            <div class="add-content">
-                <form action="../php/processtasks.php" method="POST" class="form-content">
+            <div class="add-content" style="height: 500px;">
+                <form action="../php/processtasks.php" method="POST">
                     <div class="add-inputs">
-                        <div class="add-esquerda">
-                            <label for="nomeTask">Nome da tarefa:</label>
-                            <input type="text" id="nomeTask" name="nomeTask" autofocus>
-                            <label for="descricaoTask">Descrição da tarefa:</label>
-                            <textarea rows="8" cols="35" id="descricaoTask" name="descricaoTask"></textarea>
-                        </div>
-                        <div class="add-direita">
-                            <label for="diff">Complexidade:</label>
-                            <div class="dropdown modal-dropdown" id="diff">
-                                <div class="select modal-select">
-                                    <span class="selected">Média</span>
-                                    <div class="caret"></div>
-                                </div>
-                                <ul class="menu modal-menu">
-                                    <li>Baixa</li>
-                                    <li class="active">Média</li>
-                                    <li>Alta</li>
-                                </ul>
-                            </div>
-                            <label for="type">Tipo da tarefa:</label>
-                            <div class="dropdown modal-dropdown" id="type">
-                                <div class="select modal-select">
-                                    <span class="selected">Bug</span>
-                                    <div class="caret"></div>
-                                </div>
-                                <ul class="menu modal-menu" id="selecao">
-                                    <li>Story</li>
-                                    <li>Bug</li>
-                                    <li>Task</li>
-                                    <li>Spike</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="add-esquerda">
+                        <label for="nomeTask">Nome da tarefa:</label>
+                        <input type="text" id="nomeTask" name="task_title"  autofocus>
+                        <label for="descricaoTask">Descrição da tarefa:</label>
+                        <textarea rows="8" cols="35" id="descricaoTask" name="task_desc"></textarea>
                     </div>
-                    <div class="add-botoes">
-                        <button class="add-cancel">Cancelar</button>
-                        <button type="submit" class="add-save" onclick="enviarDados()">Salvar</button>
+                    <div class="add-direita">
+                        <label for="type">Data esperada de Conclusão:</label>
+                        <input type="date" name="task_time" style="height:35px;">
+                        <label for="diff">Complexidade:</label>
+                            <select name="priority" class="select1">
+                                <option value="alta" class="choose">Alta</option>
+                                <option value="media" class="choose">Média</option>
+                                <option value="baixa" class="choose">Baixa</option>
+                            </select>
+                            <label for="type">Tipo da tarefa:</label>
+                            <select name="task_type" class="select1">
+                                <option value="story">Story</option>
+                                <option value="bug" class="choose">Bug</option>
+                                <option value="task" class="choose">Task</option>
+                                <option value="spike" class="choose">Spike</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+                    <div class="modal-botoes-kanban">
+                        <button class="modal-save">Cancelar</button>
+                        <button class="modal-cancel" type="submit">Criar</button>
                     </div>
                 </form>
-            </div>
+            </div>    
         </div>
         <script src="../js/kanban/dragndrop.js"></script>
         <script src="../js/kanban/visualizacao.js"></script>

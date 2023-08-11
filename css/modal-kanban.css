@@ -81,3 +81,24 @@
   border-radius: 5px;
   width: 20%;
 }
+
+.select1{
+  background-color: #7874a4;
+  color: #fff;
+  border-radius: 5px;
+  height: 45px;
+  padding-left: 7px;
+  border-style: none;
+}
+
+.select1 option{
+  background-color: #7874a4;
+  color: #fff;
+  box-sizing: border-box;
+  padding-left: 7px;
+  border-style: none;
+}
+
+option :hover{
+  background-color: #181537;
+}

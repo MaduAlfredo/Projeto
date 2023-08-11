@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="../css/kanbanphp.css">
 </head>
 <body>
-<div class="add-content" style="height: 500px;">
-    <form action="../php/processtasks.php" method="POST">
-        <div class="add-inputs">
+<div class="add-modal">
+    <div class="add-content" style="height: 500px;">
+        <form action="../php/processtasks.php" method="POST">
+            <div class="add-inputs">
             <div class="add-esquerda">
                 <label for="nomeTask">Nome da tarefa:</label>
                 <input type="text" id="nomeTask" name="task_title"  autofocus>
@@ -21,28 +22,29 @@
             </div>
             <div class="add-direita">
                 <label for="type">Data esperada de Conclusão:</label>
-                    <input type="date" name="task_time" id="">
+                <input type="date" name="task_time" style="height:35px;">
                 <label for="diff">Complexidade:</label>
-                    <select name="priority" id="">
-                        <option value="alta">Alta</option>
-                        <option value="media">Média</option>
-                        <option value="baixa">Baixa</option>
+                    <select name="priority" class="select1">
+                        <option value="alta" class="choose">Alta</option>
+                        <option value="media" class="choose">Média</option>
+                        <option value="baixa" class="choose">Baixa</option>
                     </select>
-                <label for="type">Tipo da tarefa:</label>
-                    <select name="task_type" id="">
+                    <label for="type">Tipo da tarefa:</label>
+                    <select name="task_type" class="select1">
                         <option value="story">Story</option>
-                        <option value="bug">Bug</option>
-                        <option value="task">Task</option>
-                        <option value="spike">Spike</option>
+                        <option value="bug" class="choose">Bug</option>
+                        <option value="task" class="choose">Task</option>
+                        <option value="spike" class="choose">Spike</option>
                     </select>
+                </div>
+                
             </div>
-
-        </div>
-        <div class="modal-botoes-kanban">
-        <button class="modal-save">Cancelar</button>
-        <button class="modal-cancel" type="submit">Criar</button>
-        </div>
-    </form>
-</div>    
+            <div class="modal-botoes-kanban">
+                <button class="modal-save">Cancelar</button>
+                <button class="modal-cancel" type="submit">Criar</button>
+            </div>
+        </form>
+    </div>    
+</div>
 </body>
 </html>
