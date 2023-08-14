@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start();
         // Armazena o email e o id_user na sessão
         $_SESSION["email"] = $email;
-        $_SESSION["id_user"] = $id_user; // Correção: use a variável $id_user
+        //$_SESSION["id_user"] = $id_user; // Correção: use a variável $id_user
         
 
         header("Location: ../html/kanban.php");

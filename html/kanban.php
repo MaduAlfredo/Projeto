@@ -15,7 +15,7 @@
     <section class="project_sidebar">
         <div class="sidebar-cima">
             <div class="profile">
-                <button onclick="document.location='settings.html'" class="profile-left">        
+                <button onclick="document.location='settings.php'" class="profile-left">        
                 <?php
                     include_once '../php/conexao.php';
 

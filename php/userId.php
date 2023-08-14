@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 $email = $_SESSION["email"]; // Make sure to sanitize and validate the email
 
