@@ -1,6 +1,6 @@
 <?php
 // Configurações do banco de dados
-$host = 'taskboltdb.co5yba8aprwc.sa-east-1.rds.amazonaws.com';
+$host = 'taskboltdb.cfd4uoticztw.sa-east-1.rds.amazonaws.com';
 $usuario = 'admin';
 $senha = '18082022';
 $banco = 'taskboltdb';
